@@ -8,7 +8,7 @@ def index(request):
     return render(request, 'taric_books/index.html', {'form': form})
 
 def results(request):
-    response = isbn_manager.search_by_author(request.POST['search_value'])
+    response = isbn_manager.search_by("author_name", request.POST['search_value'])
     context = {
         'books_list': response,
         'form': request.POST['search_value']

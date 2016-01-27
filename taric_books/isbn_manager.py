@@ -3,17 +3,11 @@ import requests
 import isbn_utils
 from django.conf import settings
 
-def search_by_author(author):
-    query = "books?q=" + author + "&i=author_name"
+def search_by(filter, value ):
+    query = "books?q=" + value + "&i=" + filter
     response = send_request(query)
-    decoded = isbn_utils.parse_json_to_model(response)
-    return decoded
-    # print("The ISBN of the most `spoken-about` book with this title is %s" % isbn)
-    # print("")
-    # print("... and the book is:")
-    # print("")
-    # print((meta(isbn)))
-    # raise Exception("Not implemented yet")
+    list_of_books = isbn_utils.get_list_of_books(response)
+    return list_of_books
 
 def search_by_ISBN(isbn):
     raise Exception("Not implemented yet")

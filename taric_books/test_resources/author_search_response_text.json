@@ -1,0 +1,300 @@
+{
+   "data" : [
+      {
+         "lcc_number" : "",
+         "book_id" : "eine_leichte_komodie",
+         "physical_description_text" : "4.4\"x7.0\"x1.2\"; 0.7 lb; 540 pages",
+         "summary" : "",
+         "dewey_decimal" : "",
+         "isbn13" : "9783518396322",
+         "notes" : "",
+         "title_latin" : "Eine leichte Komodie.",
+         "publisher_id" : "suhrkamp",
+         "publisher_text" : "Suhrkamp",
+         "language" : "",
+         "isbn10" : "3518396323",
+         "publisher_name" : "Suhrkamp",
+         "awards_text" : "",
+         "edition_info" : "Paperback; 2000-05-01",
+         "urls_text" : "",
+         "title_long" : "",
+         "dewey_normal" : "0",
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "subject_ids" : [],
+         "title" : "Eine leichte Kom�die.",
+         "marc_enc_level" : "~"
+      },
+      {
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "marc_enc_level" : "~",
+         "title" : "Ri�a de gatos",
+         "subject_ids" : [
+            "literature_fiction"
+         ],
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "Perfect Paperback; 2011-10-01",
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "notes" : "",
+         "isbn13" : "9788408105626",
+         "dewey_decimal" : "",
+         "publisher_name" : "BOOKET",
+         "isbn10" : "8408105620",
+         "language" : "",
+         "publisher_text" : "BOOKET",
+         "title_latin" : "Rina de gatos",
+         "publisher_id" : "booket",
+         "book_id" : "rina_de_gatos",
+         "lcc_number" : "",
+         "summary" : "",
+         "physical_description_text" : "5.1\"x7.9\"x1.0\"; 0.7 lb"
+      },
+      {
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "title" : "Una Comedia Ligera",
+         "subject_ids" : [],
+         "marc_enc_level" : "~",
+         "edition_info" : "Paperback; 2003-06",
+         "awards_text" : "",
+         "urls_text" : "",
+         "title_long" : "",
+         "dewey_normal" : "813",
+         "isbn13" : "9788432231544",
+         "dewey_decimal" : "813",
+         "notes" : "",
+         "publisher_id" : "planeta",
+         "title_latin" : "Una Comedia Ligera",
+         "isbn10" : "8432231541",
+         "publisher_name" : "Planeta",
+         "language" : "",
+         "publisher_text" : "Planeta",
+         "lcc_number" : "",
+         "book_id" : "una_comedia_ligera_a02",
+         "summary" : "",
+         "physical_description_text" : ""
+      },
+      {
+         "physical_description_text" : "",
+         "summary" : "",
+         "book_id" : "sans_nouvelles_de_gurb",
+         "lcc_number" : "",
+         "language" : "",
+         "publisher_text" : "Seuil",
+         "isbn10" : "2020482363",
+         "publisher_name" : "Seuil",
+         "title_latin" : "Sans nouvelles de Gurb",
+         "publisher_id" : "seuil",
+         "notes" : "",
+         "dewey_decimal" : "",
+         "isbn13" : "9782020482363",
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "urls_text" : "",
+         "edition_info" : "Paperback; 2001-03-16",
+         "awards_text" : "",
+         "marc_enc_level" : "~",
+         "subject_ids" : [],
+         "title" : "Sans nouvelles de Gurb",
+         "author_data" : [
+            {
+               "id" : "mendoza_eduardo",
+               "name" : "Mendoza, Eduardo"
+            }
+         ]
+      },
+      {
+         "physical_description_text" : "",
+         "summary" : "",
+         "lcc_number" : "",
+         "book_id" : "una_comedia_ligera_a01",
+         "publisher_id" : "editorial_seix_barral",
+         "title_latin" : "Una Comedia Ligera",
+         "language" : "",
+         "publisher_text" : "Editorial Seix Barral",
+         "isbn10" : "8432207977",
+         "publisher_name" : "Editorial Seix Barral",
+         "dewey_decimal" : "",
+         "isbn13" : "9788432207976",
+         "notes" : "",
+         "title_long" : "",
+         "dewey_normal" : "0",
+         "awards_text" : "",
+         "edition_info" : "Paperback; 2001-11",
+         "urls_text" : "",
+         "subject_ids" : [],
+         "title" : "Una Comedia Ligera",
+         "marc_enc_level" : "~",
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ]
+      },
+      {
+         "awards_text" : "",
+         "edition_info" : "Paperback; 1998-01-20",
+         "urls_text" : "",
+         "title_long" : "",
+         "dewey_normal" : "0",
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "title" : "Le labyrinthe aux olives",
+         "subject_ids" : [],
+         "marc_enc_level" : "~",
+         "lcc_number" : "",
+         "book_id" : "le_labyrinthe_aux_olives",
+         "summary" : "",
+         "physical_description_text" : "",
+         "isbn13" : "9782020333092",
+         "dewey_decimal" : "",
+         "notes" : "",
+         "title_latin" : "Le labyrinthe aux olives",
+         "publisher_id" : "seuil",
+         "publisher_name" : "Seuil",
+         "isbn10" : "2020333090",
+         "language" : "",
+         "publisher_text" : "Seuil"
+      },
+      {
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "",
+         "marc_enc_level" : "",
+         "subject_ids" : [],
+         "title" : "El a�o del diluvio",
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "physical_description_text" : "171 p. ; 20 cm",
+         "summary" : "",
+         "book_id" : "el_ano_del_diluvio",
+         "lcc_number" : "",
+         "publisher_text" : "Barcelona : Seix Barral, 1992.",
+         "language" : "spa",
+         "isbn10" : "8432206652",
+         "publisher_name" : "Seix Barral",
+         "publisher_id" : "seix_barral",
+         "title_latin" : "ano del diluvio",
+         "notes" : "",
+         "dewey_decimal" : "",
+         "isbn13" : "9788432206658"
+      },
+      {
+         "publisher_text" : "Circulo de Lectores",
+         "language" : "",
+         "publisher_name" : "Circulo de Lectores",
+         "isbn10" : "8422665840",
+         "title_latin" : "Una comedia ligera",
+         "publisher_id" : "circulo_de_lectores",
+         "notes" : "",
+         "dewey_decimal" : "",
+         "isbn13" : "9788422665847",
+         "physical_description_text" : "",
+         "summary" : "",
+         "book_id" : "una_comedia_ligera",
+         "lcc_number" : "",
+         "marc_enc_level" : "~",
+         "subject_ids" : [],
+         "title" : "Una comedia ligera",
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "Hardcover; 1997"
+      },
+      {
+         "notes" : "",
+         "isbn13" : "9788432207310",
+         "dewey_decimal" : "",
+         "publisher_name" : "Seix Barral",
+         "isbn10" : "8432207314",
+         "publisher_text" : "Barcelona : Seix Barral, 1997.",
+         "language" : "spa",
+         "publisher_id" : "seix_barral",
+         "title_latin" : "misterio de la cripta embrujada",
+         "book_id" : "el_misterio_de_la_cripta_embrujada_a03",
+         "lcc_number" : "",
+         "summary" : "",
+         "physical_description_text" : "189 p. ; 20 cm.",
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "marc_enc_level" : "",
+         "title" : "El misterio de la cripta embrujada",
+         "subject_ids" : [],
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "",
+         "dewey_normal" : "0",
+         "title_long" : ""
+      },
+      {
+         "lcc_number" : "",
+         "book_id" : "la_ciudad_de_los_prodigios_a07",
+         "physical_description_text" : "",
+         "summary" : "",
+         "dewey_decimal" : "",
+         "isbn13" : "9788481303148",
+         "notes" : "",
+         "publisher_id" : "bibliotex_2001",
+         "title_latin" : "La Ciudad De Los Prodigios",
+         "publisher_text" : "BIBLIOTEX, 2001.",
+         "language" : "",
+         "publisher_name" : "BIBLIOTEX, 2001",
+         "isbn10" : "8481303143",
+         "awards_text" : "",
+         "edition_info" : "Paperback; 1985-01-02",
+         "urls_text" : "",
+         "title_long" : "",
+         "dewey_normal" : "0",
+         "author_data" : [
+            {
+               "name" : "MENDOZA EDUARDO",
+               "id" : "mendoza_eduardo_a01"
+            }
+         ],
+         "subject_ids" : [],
+         "title" : "La Ciudad De Los Prodigios",
+         "marc_enc_level" : "~"
+      }
+   ],
+   "page_count" : 491,
+   "result_count" : 4904,
+   "index_searched" : "author_name",
+   "current_page" : 1
+}
