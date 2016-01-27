@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% if books_list %}
+    {{ form }}
+    <ul>
+    {% for book in books_list %}
+        <li><a href="/books/{{ book.isbn13 }}/">{{ book.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</body>
+</html>
