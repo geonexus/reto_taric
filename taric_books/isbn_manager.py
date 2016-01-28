@@ -15,7 +15,10 @@ def search_by(filter, value, page=None):
 
 
 def search_by_ISBN(isbn):
-    raise Exception("Not implemented yet")
+    query = "book/" + isbn
+    response = send_request(query)
+    search_result = Struct(response.json())
+    return search_result
 
 
 def search_by_title(title):

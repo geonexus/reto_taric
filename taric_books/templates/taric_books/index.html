@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<form action="{% url 'author' author="value" %}" method="post">
+<form action="{% url 'author' %}" method="post">
 {% csrf_token %}
     {{ form }}
     <input type="submit" value="Search" />

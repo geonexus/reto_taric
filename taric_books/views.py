@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.utils.text import slugify
 from .forms import SearchForm, PageForm
 import isbn_manager
 
@@ -7,13 +8,27 @@ def index(request):
     form = SearchForm()
     return render(request, 'taric_books/index.html', {'form': form})
 
-def author(request, author):
+def author(request):
     form = PageForm()
-    if author == "value":
-        author_name = request.POST['search_value']
-    else:
-        author_name = author
-        page = request.POST['page_value']
+    author_name = slugify(request.POST['search_value'])
+
+    print "this is author name" + author_name
+    response = isbn_manager.search_by_author(author_name, page=None)
+    context = {
+        'page_form': form,
+        'books_list': response.data,
+        'page_count': response.page_count,
+        'current_page': response.current_page,
+        'next_page': int(response.current_page) + 1,
+        'author_name': author_name
+    }
+
+    return render(request, 'taric_books/search_result.html', context)
+
+def author_page(request, author):
+    form = PageForm()
+    author_name = slugify(author)
+    page = request.POST['page_value']
     print "this is author name" + author_name
     response = isbn_manager.search_by_author(author_name, page=page)
     context = {
@@ -38,16 +53,10 @@ def results(request):
 
     return render(request, 'taric_books/search_result.html', context)
 
-def detail(request, isbn):
-    try:
-        question = Question.objects.get(pk=question_id)
-    except Question.DoesNotExist:
-        raise Http404("Question does not exist")
-    return render(request, 'polls/detail.html', {'question': question})
+def isbn(request, isbn):
+    response = isbn_manager.search_by_ISBN(isbn)
+    context = {
+        'book_details': response.data,
+    }
 
-def vote(request, isbn):
-    return HttpResponse("You're voting on question %s." % isbn)
-
-# def about(request):
-#     context = RequestContext(request)
-#     return render_to_response('rango/about.html', {}, context)
+    return render(request, 'taric_books/isbn.html', context)

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
+
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <table>
+        <thead class="book_details">
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Author Data</th>
+            <th>Publisher</th>
+        </tr>
+      </thead>
+      <tbody class="book_details">
+      <tr>
+      {% for book in book_details %}
+          <td>{{ book.isbn13 }}</td>
+          <td>{{ book.title_latin }}</td>
+          <td>{% for data in book.author_data %}
+                {{ data.name }}
+                {% endfor %}</td>
+          <td>{{ book.publisher_name }}</td>
+
+      {% endfor %}
+      </tr>
+      </tbody>
+    </table>
+
+    {{ book_details }}
+
+</body>
+</html>

@@ -8,6 +8,8 @@ To tests this module you should execute
 __author__ = 'Geon'
 
 from django.test import TestCase
+from django.test import Client
+from unittest import SkipTest
 from django.conf import settings
 from mock import patch
 import json
@@ -56,9 +58,9 @@ class isbn_client_tests(TestCase):
         # with patch.object(isbn_manager.requests, 'get', return_value=response) as mock_method:
 
         response = isbn_manager.search_by_author(self.author)
-        self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+        self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
-
+    @SkipTest
     @patch('requests.get', side_effect=mocked_requests_get)
     def test_search_client_by_title(self, mock_get):
         """Tests if method gets a list of books that match with the title."""
@@ -72,14 +74,29 @@ class isbn_client_tests(TestCase):
         """Tests if method gets a book searching by ISBN."""
 
         response = isbn_manager.search_by_ISBN(self.ISBN)
-        self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
-                                                   FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
-
+        self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                   FILE_NAME_ISBN_SEARCH_RESPONSE).read())["data"])
+    @SkipTest
     @patch('requests.get', side_effect=mocked_requests_get)
-    def test_search_client_by_title(self, mock_get):
-        """Tests if method gets a list of books that match with the title."""
+    def test_search_client_by_publisher(self, mock_get):
+        """Tests if method gets a list of books that match with the publisher."""
 
-        response = isbn_manager.search_by_title(self.title)
+        response = isbn_manager.search_by_publisher(self.title)
         self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
+    @SkipTest
+    @patch('requests.get', side_effect=mocked_requests_get)
+    def test_search_client_by_topic(self, mock_get):
+        """Tests if method gets a list of books that match with the topic."""
+
+        response = isbn_manager.search_by_topic(self.title)
+        self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                   FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
+
+    def test_load_index(self):
+        """Tests if method load the index page."""
+        c = Client()
+        response = c.get('/taric_books/')
+
+        self.assertEqual(response.status_code, 200)
 

@@ -1,25 +1,47 @@
 <!DOCTYPE html>
+
 <html>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
+{{ author_name }}
 {% if books_list %}
-    {{ author_name }}
-    <ul>
-    {% for book in books_list %}
-        <li><a href="/book/{{ book.isbn13 }}/">{{ book.title_latin }}</a></li>
-    {% endfor %}
-    </ul>
+    <table>
+  <thead>
+    <tr>
+        <th>ISBN13</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publisher</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for book in books_list %}
+      <tr>
+      <td><strong><a href="/taric_books/{{ book.isbn13 }}/">{{ book.isbn13 }}</a></strong></td>
+      <td>{{ book.title_latin }}</td>
+      <td>{% for data in book.author_data %}
+            {{ data.name }}
+            {% endfor %}</td>
+      <td>{{ book.publisher_name }}</td>
+    </tr>
+   {% endfor %}
+
+  </tbody>
+</table>
     Page {{ current_page }} from {{ page_count }}
-    <form action="{% url 'author' author=author_name %}" method="post">
+    <form action="{% url 'author_page' author=author_name %}" method="post">
     {% csrf_token %}
         {{ page_form }}
         <input type="submit" value="Go" />
     </form>
 {% else %}
-    <p>No polls are available.</p>
+    <p>No data results available.</p>
 {% endif %}
 </body>
 </html>
