@@ -6,12 +6,18 @@
 </head>
 <body>
 {% if books_list %}
-    {{ form }}
+    {{ author_name }}
     <ul>
     {% for book in books_list %}
-        <li><a href="/books/{{ book.isbn13 }}/">{{ book.title }}</a></li>
+        <li><a href="/book/{{ book.isbn13 }}/">{{ book.title_latin }}</a></li>
     {% endfor %}
     </ul>
+    Page {{ current_page }} from {{ page_count }}
+    <form action="{% url 'author' author=author_name %}" method="post">
+    {% csrf_token %}
+        {{ page_form }}
+        <input type="submit" value="Go" />
+    </form>
 {% else %}
     <p>No polls are available.</p>
 {% endif %}

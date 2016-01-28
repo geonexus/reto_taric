@@ -4,12 +4,14 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    # ex: /books/
+    # ex: /taric_books/
     url(r'^$', views.index, name='index'),
-    # ex: /books/results/
+    # ex: /taric_books/results/
     url(r'^results/$', views.results, name='results'),
-    # ex: /books/5/
+    # ex: /taric_books/5555555/
     url(r'^(?P<isbn>[-\w]+)/$', views.detail, name='detail'),
-    # ex: /books/5/vote/
-    url(r'^(?P<isbn>[-\w]+)/vote/$', views.vote, name='vote'),
+    # ex: /taric_books/author/John
+    url(r'^author/(?P<author>[-\w]+)/$', views.author, name='author'),
+    # ex: /taric_books/author/John/page/1
+    url(r'^author/(?P<author>[-\w]+)/page/(?P<page>[-\w]+)/$', views.author, name='author'),
 ]

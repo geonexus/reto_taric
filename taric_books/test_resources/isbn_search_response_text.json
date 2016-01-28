@@ -1,0 +1,36 @@
+{
+   "index_searched" : "isbn",
+   "data" : [
+      {
+         "notes" : "",
+         "dewey_decimal" : "",
+         "isbn13" : "9788408105626",
+         "publisher_text" : "BOOKET",
+         "language" : "",
+         "publisher_name" : "BOOKET",
+         "isbn10" : "8408105620",
+         "publisher_id" : "booket",
+         "title_latin" : "Rina de gatos",
+         "book_id" : "rina_de_gatos",
+         "lcc_number" : "",
+         "physical_description_text" : "5.1\"x7.9\"x1.0\"; 0.7 lb",
+         "summary" : "",
+         "author_data" : [
+            {
+               "id" : "mendoza_eduardo",
+               "name" : "Mendoza, Eduardo"
+            }
+         ],
+         "marc_enc_level" : "~",
+         "subject_ids" : [
+            "literature_fiction"
+         ],
+         "title" : "Riï¿½a de gatos",
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "Perfect Paperback; 2011-10-01",
+         "dewey_normal" : "0",
+         "title_long" : ""
+      }
+   ]
+}

@@ -26,4 +26,46 @@ class Book(models.Model):
     title_long = models.CharField(max_length=500)
     author_data =  models.ForeignKey(author_data, on_delete=models.CASCADE)
 
+class Struct(object):
+    def __init__(self, adict):
+        """Convert a dictionary to a class
 
+        @param :adict Dictionary
+        """
+        self.__dict__.update(adict)
+        for k, v in adict.items():
+            if isinstance(v, dict):
+                self.__dict__[k] = Struct(v)
+
+
+class BookModel():
+    """This class contains information about book model in order to serialize it and work with.
+    """
+
+    summary = None
+    book_id = None
+    lcc_number = None
+    publisher_name = None
+    isbn10 = None
+    publisher_text = None
+    language = None
+    title_latin = None
+    publisher_id = None
+    notes = None
+    isbn13 = None
+    dewey_decimal = None
+    dewey_normal = None
+    title_long = None
+    urls_text = None
+    awards_text = None
+    marc_enc_level = None
+    title = None
+    title_long = None
+    author_data =  None
+
+class SearchResult():
+    data = None
+    page_count = None
+    result_count = None
+    index_searched = None
+    current_page = None
