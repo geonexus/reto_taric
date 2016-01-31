@@ -127,6 +127,13 @@ Once you were inside the right location, execute the required commands:
     $ export DJANGO_SETTINGS_MODULE=reto_taric.settings
     $ python manage.py test
 
+or coverage to get statics about the code   coverage
+::
+
+    $ coverage run --source='.' manage.py test taric_books
+    $ coverage report
+
+
 
 Top_.
 
