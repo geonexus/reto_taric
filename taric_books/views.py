@@ -55,3 +55,15 @@ def isbn(request, isbn):
     }
 
     return render(request, 'taric_books/isbn.html', context)
+
+def taric(request):
+    form = SearchForm()
+    return render(request, 'taric_books/taric.html', {'form': form})
+
+def github(request):
+    form = SearchForm()
+    return render(request, 'taric_books/github.html', {'form': form})
+
+def about(request):
+    form = SearchForm()
+    return render(request, 'taric_books/about.html', {'form': form})

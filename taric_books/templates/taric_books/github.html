@@ -5,20 +5,19 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
     <meta charset="UTF-8">
-    <title></title>
+    <title>TARIC</title>
 </head>
 <body>
 {%  include "taric_books/header.html" %}
 
 <!-- cuerpo -->
 <div id="main_body">
- <h1>TARIC BOOKS</h1>
+    <h1>GITHUB</h1>
 
-    <form action="{% url 'search' %}" method="post">
-{% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Search" />
-</form>
+    To get the source code please, follow the link to visit
+    <a href="https://github.com/geonexus/reto_taric">Github</a>
+
+
 </div><!-- /cuerpo -->
 
 {%  include "taric_books/footer.html" %}

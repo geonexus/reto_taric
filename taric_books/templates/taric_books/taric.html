@@ -5,20 +5,19 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
     <meta charset="UTF-8">
-    <title></title>
+    <title>TARIC</title>
 </head>
 <body>
 {%  include "taric_books/header.html" %}
 
 <!-- cuerpo -->
 <div id="main_body">
- <h1>TARIC BOOKS</h1>
+    <h1>TARIC</h1>
 
-    <form action="{% url 'search' %}" method="post">
-{% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Search" />
-</form>
+    To meet Taric please, follow this link to visit company's web page
+    <a href="http://www.taric.es/quienes-somos">company's web page</a>
+
+
 </div><!-- /cuerpo -->
 
 {%  include "taric_books/footer.html" %}
