@@ -47,7 +47,7 @@ def search_page(request, search, search_type):
     return render(request, 'taric_books/search_result.html', context)
 
 def isbn(request, isbn):
-    response = isbn_manager.search_by_isbn(isbn)
+    response = isbn_manager.search_by("ISBN", isbn)
     cover_url = gbooks_covers.find_cover_url_by_ISBN(isbn)
     context = {
         'book_details': response.data,
