@@ -47,14 +47,14 @@ class simpleapp_tk(Tkinter.Tk):
 
     def OnButtonClick(self):
         # Show book search
-        result = isbn_manager.search_by_author(self.entryVariable.get())
+        result = isbn_manager.search_by("author_name", self.entryVariable.get())
         self.populate_list(result)
         self.labelVariable.set(" (You clicked the button)")
         self.entry.focus_set()
         self.entry.selection_range(0, Tkinter.END)
 
     def OnPressEnter(self, event):
-        result = isbn_manager.search_by_author(self.entryVariable.get())
+        result = isbn_manager.search_by("author_name", self.entryVariable.get())
         self.populate_list(result)
         self.labelVariable.set(" (You pressed ENTER)")
         self.entry.focus_set()

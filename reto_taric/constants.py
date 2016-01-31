@@ -8,7 +8,7 @@ BUTTON_SEARCH_TEXT = u"Search books"
 UNIT_TEST_RESOURCES_FOLDER = u'taric_books/test_resources/'
 FILE_NAME_AUTHOR_SEARCH_RESPONSE = u'author_search_response_text.json'
 FILE_NAME_ISBN_SEARCH_RESPONSE = u'isbn_search_response_text.json'
-FILE_NAME_COVER_SEARCH_RESPONSE = u'cover_search_response_text.json'
+FILE_NAME_COVER_SEARCH_RESPONSE = u'cover_search_with_image.json'
 
 SEARCH_TYPES = (
     ('title', 'Title'),

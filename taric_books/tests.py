@@ -14,8 +14,9 @@ from django.conf import settings
 from mock import patch
 import json
 import isbn_manager
+import gbooks_covers
 from reto_taric.constants import UNIT_TEST_RESOURCES_FOLDER, FILE_NAME_AUTHOR_SEARCH_RESPONSE, \
-    FILE_NAME_ISBN_SEARCH_RESPONSE
+    FILE_NAME_ISBN_SEARCH_RESPONSE, FILE_NAME_COVER_SEARCH_RESPONSE
 
 """ Class to test the interaction with isbndb
 """
@@ -27,8 +28,11 @@ class isbn_client_tests(TestCase):
 
         self.author = "Eduardo Mendoza"
         self.filter_author = "author_name"
+        self.filter_isbn = "ISBN"
+
         self.title = "Rina de gatos"
         self.ISBN = "9788408105626"
+        self.ISBN_for_cover = "9788432291395"
 
     def mocked_requests_get(*args, **kwargs):
         class MockResponse:
@@ -41,6 +45,7 @@ class isbn_client_tests(TestCase):
 
         query_author = "books?q=" + "Eduardo Mendoza" + "&i=" + "author_name"
         query_isbn = "book/" + "9788408105626"
+        ISBN_with_cover = "9788432291395"
 
         if args[0] == settings.ISBNDB_API_URL + query_author:
             return MockResponse(json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
@@ -48,6 +53,9 @@ class isbn_client_tests(TestCase):
         elif args[0] == settings.ISBNDB_API_URL + query_isbn:
             return MockResponse(json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                 FILE_NAME_ISBN_SEARCH_RESPONSE).read()), 200)
+        elif args[0] == settings.GOOGLEBOOKS_API_URL + ISBN_with_cover:
+            return MockResponse(json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                FILE_NAME_COVER_SEARCH_RESPONSE).read()), 200)
 
         return MockResponse({}, 404)
 
@@ -57,7 +65,7 @@ class isbn_client_tests(TestCase):
 
         # with patch.object(isbn_manager.requests, 'get', return_value=response) as mock_method:
 
-        response = isbn_manager.search_by_author(self.author)
+        response = isbn_manager.search_by(self.filter_author, self.author)
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
     @SkipTest
@@ -65,7 +73,7 @@ class isbn_client_tests(TestCase):
     def test_search_client_by_title(self, mock_get):
         """Tests if method gets a list of books that match with the title."""
 
-        response = isbn_manager.search_by_title(self.title)
+        response = isbn_manager.search_by(self.title)
         self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
 
@@ -73,7 +81,7 @@ class isbn_client_tests(TestCase):
     def test_search_client_by_isbn(self, mock_get):
         """Tests if method gets a book searching by ISBN."""
 
-        response = isbn_manager.search_by_ISBN(self.ISBN)
+        response = isbn_manager.search_by(self.filter_isbn, self.ISBN)
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_ISBN_SEARCH_RESPONSE).read())["data"])
     @SkipTest
@@ -81,7 +89,7 @@ class isbn_client_tests(TestCase):
     def test_search_client_by_publisher(self, mock_get):
         """Tests if method gets a list of books that match with the publisher."""
 
-        response = isbn_manager.search_by_publisher(self.title)
+        response = isbn_manager.search_by(self.title)
         self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
     @SkipTest
@@ -89,7 +97,7 @@ class isbn_client_tests(TestCase):
     def test_search_client_by_topic(self, mock_get):
         """Tests if method gets a list of books that match with the topic."""
 
-        response = isbn_manager.search_by_topic(self.title)
+        response = isbn_manager.search_by(self.title)
         self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
 
@@ -100,3 +108,11 @@ class isbn_client_tests(TestCase):
 
         self.assertEqual(response.status_code, 200)
 
+    @patch('requests.get', side_effect=mocked_requests_get)
+    def test_cover_url_from_librathing(self, mock_get):
+        """Tests if method gets a Cover url for a ISBN."""
+        response = gbooks_covers.find_cover_url_by_ISBN(self.ISBN_for_cover)
+        expected = "http://books.google.es/books/content?id=CoBGdI5WyOIC&printsec=frontcover&" \
+                   "img=1&zoom=1&edge=curl&source=gbs_api"
+
+        self.assertEqual(response, expected)
