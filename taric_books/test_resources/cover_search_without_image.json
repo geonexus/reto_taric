@@ -1,0 +1,70 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 1,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "fUkokgEACAAJ",
+   "etag": "w+aDhgvoJX8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/fUkokgEACAAJ",
+   "volumeInfo": {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "subtitle": "Scottish-Gaelic Edition",
+    "authors": [
+     "J. K. Rowling"
+    ],
+    "publisher": "Bloomsbury USA Childrens",
+    "publishedDate": "2010-07-01",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "158234681X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781582346816"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 250,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Fiction"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 12,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "language": "en",
+    "previewLink": "http://books.google.es/books?id=fUkokgEACAAJ&dq=isbn:9781582346816&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.es/books?id=fUkokgEACAAJ&dq=isbn:9781582346816&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.es/books/about/Harry_Potter_and_the_Philosopher_s_Stone.html?hl=&id=fUkokgEACAAJ"
+   },
+   "saleInfo": {
+    "country": "ES",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "ES",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.es/books/reader?id=fUkokgEACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  }
+ ]
+}

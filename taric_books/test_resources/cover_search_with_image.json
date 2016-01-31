@@ -1,0 +1,100 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 1,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "CoBGdI5WyOIC",
+   "etag": "Zm+g8qY0af8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/CoBGdI5WyOIC",
+   "volumeInfo": {
+    "title": "El laberinto de las aceitunas",
+    "authors": [
+     "Eduardo Mendoza"
+    ],
+    "publisher": "Grupo Planeta Spain",
+    "publishedDate": "2011-11-05",
+    "description": "«El planteamiento de El laberinto de las aceitunas es tan absurdo que permite cualquier atentado contra las normas del realismo, e incluso de la verosimilitud, como, por ejemplo, que sea el propio detective loco quien cuente su aventura en un estilo heterodoxo, vulgar y culterano. Huelga decir que se trata de un relato humorístico, remotamente emparentado con la literatura picaresca y el esperpento.» Eduardo Mendoza El laberinto de las aceitunas sitúa nuevamente en el centro de una espiral de intriga al detective manicomial y paródico que protagonizará El misterio de la cripta embrujada. Arrastrado por el azar más disparatado, en esta ocasión ha de enfrentarse a una desconocida red de maleantes que a toda costa trata de recuperar un maletín repleto de dinero y perdido en curiosas circunstancias. No es menos deslumbrante aquí que en sus obras anteriores la capacidad de Eduardo Mendoza para la escritura que contiene en sí su propia caricatura, a la vez que la de un género, el policiaco, y la de una sociedad multiforme, ridícula y degradante que sólo puede ser reconocida a través de los más variados registros expresivos. Pero su imaginación literaria va esta vez todavía más lejos: en un triple salto mortal llega, por la distorsión de la peripecia policial, no ya al reino del humor y el absurdo, sino al de la fabulación que roza, tras lo esperpéntico, el área del prodigio surreal.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9788432291395"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "8432291390"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "printType": "BOOK",
+    "categories": [
+     "Fiction"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.15.14.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.es/books/content?id=CoBGdI5WyOIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.es/books/content?id=CoBGdI5WyOIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "es",
+    "previewLink": "http://books.google.es/books?id=CoBGdI5WyOIC&printsec=frontcover&dq=isbn:8432291390&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.es/books?id=CoBGdI5WyOIC&dq=isbn:8432291390&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.es/books/about/El_laberinto_de_las_aceitunas.html?hl=&id=CoBGdI5WyOIC"
+   },
+   "saleInfo": {
+    "country": "ES",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 6.49,
+     "currencyCode": "EUR"
+    },
+    "retailPrice": {
+     "amount": 6.17,
+     "currencyCode": "EUR"
+    },
+    "buyLink": "http://books.google.es/books?id=CoBGdI5WyOIC&dq=isbn:8432291390&hl=&buy=&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 6490000.0,
+       "currencyCode": "EUR"
+      },
+      "retailPrice": {
+       "amountInMicros": 6170000.0,
+       "currencyCode": "EUR"
+      }
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "ES",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.es/books/download/El_laberinto_de_las_aceitunas-sample-epub.acsm?id=CoBGdI5WyOIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.es/books/download/El_laberinto_de_las_aceitunas-sample-pdf.acsm?id=CoBGdI5WyOIC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.es/books/reader?id=CoBGdI5WyOIC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "«El planteamiento de El laberinto de las aceitunas es tan absurdo que permite cualquier atentado contra las normas del realismo, e incluso de la verosimilitud, como, por ejemplo, que sea el propio detective loco quien cuente su aventura en ..."
+   }
+  }
+ ]
+}
