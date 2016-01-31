@@ -144,13 +144,21 @@ LOGGING = {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
-        }
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
     },
     'loggers': {
         'django.request': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
             'propagate': True,
+        },
+        'taric_books.gbooks_covers': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
         },
     }
 }
@@ -161,4 +169,4 @@ ISBNDB_API_CONTENT_TYPE = "json"
 ISBNDB_API_KEY= "WV73ZETL"
 ISBNDB_API_URL = ISBNDB_API_BASEURL + ISBNDB_API_VERSION + "/" + ISBNDB_API_CONTENT_TYPE + "/" + ISBNDB_API_KEY + "/"
 
-
+GOOGLEBOOKS_API_URL = "https://www.googleapis.com/books/v1/volumes?q=isbn:"
