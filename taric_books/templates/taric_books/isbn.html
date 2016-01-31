@@ -9,31 +9,66 @@
     <title></title>
 </head>
 <body>
-    <table>
-        <thead class="book_details">
-        <tr>
-            <th>ISBN</th>
-            <th>Title</th>
-            <th>Author Data</th>
-            <th>Publisher</th>
-        </tr>
-      </thead>
-      <tbody class="book_details">
-      <tr>
-      {% for book in book_details %}
-          <td>{{ book.isbn13 }}</td>
-          <td>{{ book.title_latin }}</td>
-          <td>{% for data in book.author_data %}
+{%  include "taric_books/header.html" %}
+<div id="main_body">
+{% for book in book_details %}
+    <div align="center">
+        {% if cover_url %}
+            <img src="{{ cover_url }}" alt="No cover" border="1"/>
+        {% else %}
+            <img src="{% static "taric_books/no_cover.jpg" %}" alt="No cover" border="1"/>
+        {% endif %}
+    </div>
+
+<table class="book_details">
+<tbody>
+  <tr>
+    <th scope="row">ISBN13</th>
+    <td>{{ book.isbn13 }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Title</th>
+    <td>{{ book.title_latin }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Author Data</th>
+    <td>{% for data in book.author_data %}
                 {{ data.name }}
                 {% endfor %}</td>
-          <td>{{ book.publisher_name }}</td>
-
-      {% endfor %}
-      </tr>
-      </tbody>
-    </table>
-
-    {{ book_details }}
+  </tr>
+  <tr>
+    <th scope="row">Publisher</th>
+    <td>{{ book.publisher_name }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Subjets</th>
+    <td>{% for data in book.subject_ids %}
+                {{ data }}
+                {% endfor %}</td>
+  </tr>
+  <tr>
+    <th scope="row">Summary</th>
+    <td>{{ book.summary }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Edition</th>
+    <td>{{ book.edition_info }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Book Details</th>
+    <td>{{ book.details }} <br/>
+        {{ book.physical_description_text }}
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">ISBN10</th>
+    <td>{{ book.isbn10 }}</td>
+  </tr>
+</tbody>
+</table>
+ {% endfor %}
+</div>
+{%  include "taric_books/footer.html" %}
 
 </body>
 </html>

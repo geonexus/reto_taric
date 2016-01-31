@@ -9,7 +9,8 @@
     <title></title>
 </head>
 <body>
-{{ author_name }}
+{%  include "taric_books/header.html" %}
+<div id="main_body">
 {% if books_list %}
     <table>
   <thead>
@@ -34,14 +35,21 @@
 
   </tbody>
 </table>
-    Page {{ current_page }} from {{ page_count }}
-    <form action="{% url 'author_page' author=author_name %}" method="post">
-    {% csrf_token %}
-        {{ page_form }}
-        <input type="submit" value="Go" />
-    </form>
+    <div class="page_form" align="center">
+        Page {{ current_page }} from {{ page_count }}
+        <form action="{% url 'search_page' search=search_value search_type=search_type %}" method="post">
+        {% csrf_token %}
+                {{ page_form }}
+
+
+            <input type="submit" value="Go" />
+        </form>
+    </div>
 {% else %}
     <p>No data results available.</p>
 {% endif %}
+</div>
+{%  include "taric_books/footer.html" %}
+
 </body>
 </html>

@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
-<form action="{% url 'author' %}" method="post">
+{%  include "taric_books/header.html" %}
+
+<!-- cuerpo -->
+<div id="main_body">
+ <h1>TARIC BOOKS</h1>
+  <h2>made by Guillermo Jimenez for Taric Interview</h2>
+  <ul>
+    <li><a href="/taric_books">Index</a></li>
+    <li><a href="taric">More info about Taric</a></li>
+    <li><a href="guillermo">About Guillermo</a></li>
+  </ul>
+
+    <form action="{% url 'search' %}" method="post">
 {% csrf_token %}
     {{ form }}
     <input type="submit" value="Search" />
 </form>
+</div><!-- /cuerpo -->
+
+{%  include "taric_books/footer.html" %}
+
 </body>
 </html>
