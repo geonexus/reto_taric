@@ -91,8 +91,8 @@ To stop reto_taric, you can stop django development server using CTRL + C.
 NOTE: django provides a development webserver to deploy the application. If you want to deploy this project in
 a production system, I recommend to deploy it using gunicorn + supervisord + nginx.
 
-Accessing to the application
-============================
+Using the application
+=====================
 
 To access to the application you should insert the following address.
 
@@ -137,6 +137,16 @@ or coverage to get statics about the code   coverage
 
 Top_.
 
+Testbed
+=======
+
+At this moment there is no Testbed to test the application but it will be available in a few days located in.
+
+.. code::
+
+    http://retotaric.geonexus.es
+
+Top_.
 
 .. IMAGES
 
