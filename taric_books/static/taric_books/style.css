@@ -9,9 +9,9 @@ body {
 }
 
 #background {
-    padding-left:180px;
-    padding-right:180px;
-    padding-top:50px;
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-top: 1%;
 }
 
 #sup_container {
@@ -242,7 +242,7 @@ div.page_form {
 /* Form text input */
 
 .form-wrapper input {
-    width: 70%;
+    width: 60%;
     height: 20px;
     padding: 10px 5px;
     font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';

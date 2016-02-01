@@ -16,13 +16,9 @@
 
     <form id="form-wrapper" class="form-wrapper" action="{% url 'search' %}" method="post">
     {% csrf_token %}
-        <p>
-            {{ form_type }}
-        </p>
-        <p>
-            {{ form_value }}
+            {{ form_type.as_p }}
+            {{ form_value.as_p }}
             <button type="submit" id="sub_button">Search</button>
-        </p>
 
 </form>
 </div><!-- /cuerpo -->
