@@ -1,0 +1,320 @@
+{
+   "page_count" : 491,
+   "data" : [
+      {
+         "summary" : "",
+         "physical_description_text" : "5.0\"x7.6\"x1.7\"; 1.1 lb; 543 pages",
+         "book_id" : "la_ciudad_de_los_prodigios_a02",
+         "lcc_number" : "",
+         "isbn10" : "8432216518",
+         "publisher_name" : "Booket",
+         "language" : "",
+         "publisher_text" : "Booket",
+         "title_latin" : "La Ciudad de Los Prodigios",
+         "publisher_id" : "booket",
+         "notes" : "",
+         "isbn13" : "9788432216510",
+         "dewey_decimal" : "",
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "Hardcover; 2004-09",
+         "marc_enc_level" : "~",
+         "title" : "La Ciudad de Los Prodigios",
+         "subject_ids" : [
+            "literature_fiction_contemporary",
+            "literature_fiction_foreign_language_fiction_spanish"
+         ],
+         "author_data" : [
+            {
+               "id" : "mendoza_eduardo",
+               "name" : "Mendoza, Eduardo"
+            }
+         ]
+      },
+      {
+         "urls_text" : "",
+         "edition_info" : "Hardcover; 1986",
+         "awards_text" : "",
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "marc_enc_level" : "~",
+         "title" : "La Ciudad De Los Prodigios",
+         "subject_ids" : [],
+         "book_id" : "la_ciudad_de_los_prodigios_a01",
+         "lcc_number" : "",
+         "summary" : "",
+         "physical_description_text" : "",
+         "notes" : "",
+         "isbn13" : "9788447301256",
+         "dewey_decimal" : "",
+         "publisher_name" : "RBA editores",
+         "isbn10" : "8447301257",
+         "publisher_text" : "RBA editores",
+         "language" : "",
+         "title_latin" : "La Ciudad De Los Prodigios",
+         "publisher_id" : "rba_editores"
+      },
+      {
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "urls_text" : "",
+         "edition_info" : "Paperback; 2001",
+         "awards_text" : "",
+         "marc_enc_level" : "~",
+         "title" : "El Laberinto de las Aceitunas",
+         "subject_ids" : [],
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "summary" : "",
+         "physical_description_text" : "4.6\"x7.2\"x0.6\"; 0.4 lb; 256 pages",
+         "book_id" : "el_laberinto_de_las_aceitunas_a02",
+         "lcc_number" : "",
+         "isbn10" : "0828869057",
+         "publisher_name" : "French & European Pubns",
+         "language" : "",
+         "publisher_text" : "French & European Pubns",
+         "publisher_id" : "french_european_pubns",
+         "title_latin" : "El Laberinto de las Aceitunas",
+         "notes" : "",
+         "isbn13" : "9780828869058",
+         "dewey_decimal" : ""
+      },
+      {
+         "dewey_decimal" : "",
+         "isbn13" : "9788423314980",
+         "notes" : "",
+         "publisher_id" : "destino_ediciones",
+         "title_latin" : "Nueva York",
+         "publisher_text" : "Destino Ediciones",
+         "language" : "",
+         "publisher_name" : "Destino Ediciones",
+         "isbn10" : "8423314987",
+         "lcc_number" : "",
+         "book_id" : "nueva_york_a04",
+         "physical_description_text" : "",
+         "summary" : "",
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "subject_ids" : [
+            "nonfiction_foreign_language_nonfiction_spanish",
+            "reference_atlases_maps_atlases"
+         ],
+         "title" : "Nueva York",
+         "marc_enc_level" : "~",
+         "awards_text" : "",
+         "edition_info" : "Paperback; 1993-12",
+         "urls_text" : "",
+         "title_long" : "Nueva York (Spanish Edition)",
+         "dewey_normal" : "0"
+      },
+      {
+         "author_data" : [
+            {
+               "id" : "mendoza_eduardo",
+               "name" : "Mendoza, Eduardo"
+            }
+         ],
+         "marc_enc_level" : "~",
+         "title" : "Pio Baroja",
+         "subject_ids" : [
+            "biographies_memoirs_arts_literature_authors",
+            "nonfiction_foreign_language_nonfiction_spanish"
+         ],
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "Paperback; 2001-11",
+         "dewey_normal" : "0",
+         "title_long" : "Pio Baroja (Vidas Literarias) (Spanish Edition)",
+         "notes" : "",
+         "isbn13" : "9788428212410",
+         "dewey_decimal" : "",
+         "publisher_name" : "Ediciones Omega",
+         "isbn10" : "8428212414",
+         "language" : "",
+         "publisher_text" : "Ediciones Omega",
+         "publisher_id" : "ediciones_omega",
+         "title_latin" : "Pio Baroja",
+         "book_id" : "pio_baroja_a01",
+         "lcc_number" : "",
+         "summary" : "",
+         "physical_description_text" : "0.7 lb; 192 pages"
+      },
+      {
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "Paperback; 1982-01-01",
+         "marc_enc_level" : "~",
+         "subject_ids" : [],
+         "title" : "Le Mystï¿½re de la crypte ensorcelï¿½e",
+         "author_data" : [
+            {
+               "id" : "mendoza_eduardo",
+               "name" : "Mendoza, Eduardo"
+            }
+         ],
+         "physical_description_text" : "5.5\"x8.3\"x0.4\"; 0.5 lb; 185 pages",
+         "summary" : "",
+         "book_id" : "le_mystere_de_la_crypte_ensorcelee_a01",
+         "lcc_number" : "",
+         "language" : "",
+         "publisher_text" : "Seuil",
+         "publisher_name" : "Seuil",
+         "isbn10" : "2020060485",
+         "title_latin" : "Le Mystere de la crypte ensorcelee",
+         "publisher_id" : "seuil",
+         "notes" : "",
+         "dewey_decimal" : "",
+         "isbn13" : "9782020060486"
+      },
+      {
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "Paperback; 2003-04-01",
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "marc_enc_level" : "~",
+         "title" : "Die Stadt der Wunder. Roman.",
+         "subject_ids" : [],
+         "book_id" : "die_stadt_der_wunder_roman_a01",
+         "lcc_number" : "",
+         "summary" : "",
+         "physical_description_text" : "4.4\"x7.0\"x1.0\"; 0.7 lb",
+         "notes" : "",
+         "isbn13" : "9783518399729",
+         "dewey_decimal" : "",
+         "isbn10" : "3518399721",
+         "publisher_name" : "Suhrkamp",
+         "publisher_text" : "Suhrkamp",
+         "language" : "",
+         "publisher_id" : "suhrkamp",
+         "title_latin" : "Die Stadt der Wunder. Roman."
+      },
+      {
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "title" : "Una comedia ligera",
+         "subject_ids" : [
+            "literature_fiction_foreign_language_fiction_spanish",
+            "literature_fiction_world_literature_spanish",
+            "literature_fiction_contemporary",
+            "literature_fiction_general_general",
+            "literature_fiction_general_aas",
+            "reference_foreign_languages_instruction_spanish",
+            "crime_spain_barcelona_fiction",
+            "barcelona_spain_fiction",
+            "detective_and_mystery_stories"
+         ],
+         "marc_enc_level" : "",
+         "edition_info" : "",
+         "awards_text" : "",
+         "urls_text" : "",
+         "title_long" : "",
+         "dewey_normal" : "863.64",
+         "isbn13" : "9788432207297",
+         "dewey_decimal" : "863/.64",
+         "notes" : "",
+         "title_latin" : "comedia ligera",
+         "publisher_id" : "seix_barral",
+         "publisher_name" : "Seix Barral",
+         "isbn10" : "8432207292",
+         "publisher_text" : "Barcelona : Seix Barral, 1996.",
+         "language" : "spa",
+         "lcc_number" : "PQ6663",
+         "book_id" : "una_comedia_ligera_a03",
+         "summary" : "",
+         "physical_description_text" : "383 p. ; 24 cm."
+      },
+      {
+         "author_data" : [
+            {
+               "id" : "mendoza_eduardo",
+               "name" : "Mendoza, Eduardo"
+            }
+         ],
+         "marc_enc_level" : "~",
+         "subject_ids" : [],
+         "title" : "Le mystï¿½re de la crypte ensorcelï¿½e",
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "Mass Market Paperback; 1998-01-20",
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "notes" : "",
+         "dewey_decimal" : "",
+         "isbn13" : "9782020333061",
+         "language" : "",
+         "publisher_text" : "Seuil",
+         "publisher_name" : "Seuil",
+         "isbn10" : "2020333066",
+         "publisher_id" : "seuil",
+         "title_latin" : "Le mystere de la crypte ensorcelee",
+         "book_id" : "le_mystere_de_la_crypte_ensorcelee",
+         "lcc_number" : "",
+         "physical_description_text" : "4.2\"x7.0\"x0.5\"; 0.1 lb",
+         "summary" : ""
+      },
+      {
+         "author_data" : [
+            {
+               "name" : "Mendoza, Eduardo",
+               "id" : "mendoza_eduardo"
+            }
+         ],
+         "marc_enc_level" : "~",
+         "title" : "La Aventura del Tocador de Seqoras",
+         "subject_ids" : [
+            "mystery_thrillers_mystery",
+            "literature_fiction_foreign_language_fiction_spanish"
+         ],
+         "urls_text" : "",
+         "awards_text" : "",
+         "edition_info" : "Paperback; 2004-11",
+         "dewey_normal" : "0",
+         "title_long" : "",
+         "notes" : "",
+         "isbn13" : "9788432216657",
+         "dewey_decimal" : "",
+         "isbn10" : "8432216658",
+         "publisher_name" : "Booket",
+         "publisher_text" : "Booket",
+         "language" : "",
+         "publisher_id" : "booket",
+         "title_latin" : "La Aventura del Tocador de Seqoras",
+         "book_id" : "la_aventura_del_tocador_de_seqoras",
+         "lcc_number" : "",
+         "summary" : "",
+         "physical_description_text" : "4.9\"x7.2\"x1.0\"; 0.8 lb; 384 pages"
+      }
+   ],
+   "result_count" : 4904,
+   "index_searched" : "author_name",
+   "current_page" : "2"
+}
