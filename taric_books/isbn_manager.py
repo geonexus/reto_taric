@@ -20,7 +20,6 @@ def search_by(search_type, search_value, page=None):
 def search_by_isbn(isbn):
     query = "book/" + isbn
     response = send_request(query)
-    # search_result = Struct(response.json())
     return response
 
 

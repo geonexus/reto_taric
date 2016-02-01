@@ -6,7 +6,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def find_cover_url_by_ISBN(isbn):
+def find_cover_url_by_isbn(isbn):
     response = send_request(isbn)
     search_result = Struct(response.json())
     try:

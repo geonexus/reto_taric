@@ -115,7 +115,7 @@ class isbn_client_tests(TestCase):
     @patch('requests.get', side_effect=mocked_requests_get)
     def test_cover_url_from_librathing(self, mock_get):
         """Tests if method gets a Cover url for a ISBN."""
-        response = gbooks_covers.find_cover_url_by_ISBN(self.ISBN_for_cover)
+        response = gbooks_covers.find_cover_url_by_isbn(self.ISBN_for_cover)
         expected = "http://books.google.es/books/content?id=CoBGdI5WyOIC&printsec=frontcover&" \
                    "img=1&zoom=1&edge=curl&source=gbs_api"
 

@@ -58,7 +58,7 @@ def search_page(request, search, search_type):
 
 def isbn(request, isbn):
     response = isbn_manager.search_by("ISBN", isbn)
-    cover_url = gbooks_covers.find_cover_url_by_ISBN(isbn)
+    cover_url = gbooks_covers.find_cover_url_by_isbn(isbn)
     context = {
         'book_details': response.data,
         'cover_url': cover_url,
