@@ -242,9 +242,10 @@ div.page_form {
 /* Form text input */
 
 .form-wrapper input {
-    width: 60%;
+    width: 42%;
     height: 20px;
     padding: 10px 5px;
+    margin-left: -20%;
     font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
     border: 0;
     background: #eee;
@@ -282,6 +283,9 @@ div.page_form {
     float: right;
     border: 0;
     padding: 0px;
+    margin-top: -53px;
+    margin-right: 10%;
+
     cursor: pointer;
     height: 40px;
     width: 28%;
