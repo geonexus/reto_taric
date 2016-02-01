@@ -15,5 +15,5 @@ SEARCH_TYPES = (
     ('author_name', 'Author'),
     ('isbn', 'ISBN13'),
     ('publisher_name', 'Publisher'),
-    ('subject', 'Topic'),
+    # ('subject', 'Topic'),
 )
