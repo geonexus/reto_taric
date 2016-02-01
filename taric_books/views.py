@@ -1,7 +1,5 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 from django.utils.text import slugify
-from django.conf import settings
 from .forms import SearchFormType, SearchFormValue, PageForm
 import isbn_manager
 import gbooks_covers

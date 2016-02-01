@@ -9,6 +9,8 @@ UNIT_TEST_RESOURCES_FOLDER = u'taric_books/test_resources/'
 FILE_NAME_AUTHOR_SEARCH_RESPONSE = u'author_search_response_text.json'
 FILE_NAME_ISBN_SEARCH_RESPONSE = u'isbn_search_response_text.json'
 FILE_NAME_COVER_SEARCH_RESPONSE = u'cover_search_with_image.json'
+FILE_NAME_COVER_SEARCH_NO_IMAGE_RESPONSE = u'cover_search_without_image.json'
+FILE_NAME_COVER_SEARCH_NO_BOOK_RESPONSE = u'cover_search_not_found.json'
 
 SEARCH_TYPES = (
     ('title', 'Title'),

@@ -1,5 +1,3 @@
-
-
 class Struct(object):
     def __init__(self, adict):
         """Convert a dictionary to a class
