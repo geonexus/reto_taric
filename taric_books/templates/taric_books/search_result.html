@@ -1,55 +1,50 @@
 <!DOCTYPE html>
-
 <html>
-{% load staticfiles %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-{%  include "taric_books/header.html" %}
-<div id="main_body">
-{% if books_list %}
-    <table>
-  <thead>
-    <tr>
-        <th>ISBN13</th>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Publisher</th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for book in books_list %}
-      <tr>
-      <td><strong><a href="/taric_books/{{ book.isbn13 }}/">{{ book.isbn13 }}</a></strong></td>
-      <td>{{ book.title_latin }}</td>
-      <td>{% for data in book.author_data %}
-            {{ data.name }}
-            {% endfor %}</td>
-      <td>{{ book.publisher_name }}</td>
-    </tr>
-   {% endfor %}
-
-  </tbody>
-</table>
-    <div class="page_form" align="center">
-        Page {{ current_page }} from {{ page_count }}
-        <form action="{% url 'search_page' search=search_value search_type=search_type %}" method="post">
-        {% csrf_token %}
-                {{ page_form }}
-
-
-            <input type="submit" value="Go" />
-        </form>
-    </div>
-{% else %}
-    <p>No data results available.</p>
-{% endif %}
-</div>
-{%  include "taric_books/footer.html" %}
-
-</body>
+    <head lang="en">
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
+        <meta charset="UTF-8">
+        <title>Search Books</title>
+    </head>
+    <body>
+        {%  include "taric_books/header.html" %}
+        <div id="main_body">
+        {% if books_list %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>ISBN13</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for book in books_list %}
+                    <tr>
+                        <td><strong><a href="/taric_books/{{ book.isbn13 }}/">{{ book.isbn13 }}</a></strong></td>
+                        <td>{{ book.title_latin }}</td>
+                        <td>{% for data in book.author_data %}
+                            {{ data.name }}
+                            {% endfor %}
+                        </td>
+                        <td>{{ book.publisher_name }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <div class="page_form">
+                Page {{ current_page }} from {{ page_count }}
+                <form action="{% url 'search_page' search=search_value search_type=search_type %}" method="post">
+                {% csrf_token %}
+                        {{ page_form }}
+                    <input type="submit" value="Go" />
+                </form>
+            </div>
+        {% else %}
+            <p>No book results available.</p>
+        {% endif %}
+        </div>
+        {%  include "taric_books/footer.html" %}
+    </body>
 </html>

@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-
-    {% load staticfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
-    <meta charset="UTF-8">
-    <title>TARIC</title>
-</head>
-<body>
-{%  include "taric_books/header.html" %}
-
-<!-- cuerpo -->
-<div id="main_body">
-    <h1>TARIC</h1>
-
-    To meet Taric please, follow this link to visit
-    <a href="http://www.taric.es">company's web page</a>
-
-
-</div><!-- /cuerpo -->
-
-{%  include "taric_books/footer.html" %}
-
-</body>
+    <head lang="en">
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
+        <meta charset="UTF-8">
+        <title>About Taric</title>
+    </head>
+    <body>
+        {%  include "taric_books/header.html" %}
+        <div id="main_body">
+            <h1>TARIC</h1>
+            To meet Taric please, follow this link to visit
+            <a href="http://www.taric.es">company's web page</a>
+        </div>
+        {%  include "taric_books/footer.html" %}
+    </body>
 </html>

@@ -53,6 +53,7 @@ body {
     -webkit-box-shadow: 0px 0px 10px black;
     padding-left: 1%;
     padding-top: 1%;
+    padding-right: 1%;
     padding-bottom: 2%;
     margin-left: 180px;
     margin-right:180px;
@@ -225,7 +226,6 @@ tbody:hover tr:hover td {
 
 div.page_form {
     padding-top: 1%;
-    align-content: center;
 }
 
 /* Form wrapper styling */

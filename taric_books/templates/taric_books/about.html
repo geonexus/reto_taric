@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+    <head lang="en">
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
+        <meta charset="UTF-8">
+        <title>About Reto Taric</title>
+    </head>
+    <body>
+        {%  include "taric_books/header.html" %}
+        <div id="main_body">
+            <h1>About this Project</h1>
+            <p>
+                Reto Taric, is a web application written in Python under Django. <br />
+                This application was developed by Guillermo Jimenez.
+                The purpose of this project is to develop a small challenge due to the candidature
+                for the Python developer position  at Taric.
+            </p>
+            <p>
+                Taric_Books is a django application to provide a search engine of books.
+                It allows searching books filtering by ISBN, title, author, publisher or subject.
+            </p>
+            <p>
+                The result will be displayed as a lists and you will be able to see book details by clicking on the book ISBN.
+                Book details are recovered from ISBNdb.com and book covers are recovered from Google Books.
 
-    {% load staticfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
-    <meta charset="UTF-8">
-    <title>TARIC</title>
-</head>
-<body>
-{%  include "taric_books/header.html" %}
-
-<!-- cuerpo -->
-<div id="main_body">
-    <h1>About this Project</h1>
-
-    <p>
-        Reto Taric, a web application written in Python under Django. <br />
-        This application was developed by Guillermo Jimenez.
-    </p>
-    <p>
-        Taric_Books is a django application to provide a search engine of books.
-        It allows searching books filtering by ISBN, title, author, publisher or subject.
-    </p>
-    <p>
-        The result will be displayed as a lists and you will be able to see book details by clicking on the book ISBN.
-        Book details are recovered from ISBNdb.com and book covers are recovered from Google Books.
-    </p>
-
-</div><!-- /cuerpo -->
-
-{%  include "taric_books/footer.html" %}
-
-</body>
+            </p>
+        </div>
+        {%  include "taric_books/footer.html" %}
+    </body>
 </html>

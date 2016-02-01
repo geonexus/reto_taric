@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-
-    {% load staticfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
-    <meta charset="UTF-8">
-    <title>TARIC</title>
-</head>
-<body>
-{%  include "taric_books/header.html" %}
-
-<!-- cuerpo -->
-<div id="main_body">
-    <h1>GITHUB</h1>
-
-    To get the source code please, follow the Github link to visit
-    <a href="https://github.com/geonexus/reto_taric" target="_blank">https://github.com/geonexus/reto_taric</a>
-
-
-</div><!-- /cuerpo -->
-
-{%  include "taric_books/footer.html" %}
-
-</body>
+    <head lang="en">
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
+        <meta charset="UTF-8">
+        <title>About Reto Taric</title>
+    </head>
+    <body>
+        {%  include "taric_books/header.html" %}
+        <div id="main_body">
+            <h1>GITHUB</h1>
+            To get the source code please, follow the Github link to visit
+            <a href="https://github.com/geonexus/reto_taric" target="_blank">https://github.com/geonexus/reto_taric</a>
+        </div>
+        {%  include "taric_books/footer.html" %}
+    </body>
 </html>

@@ -40,6 +40,7 @@ def search_page(request, search, search_type):
     form = PageForm()
     search_value = slugify(search)
     page = request.POST['page_value']
+
     response = isbn_manager.search_by(search_type, search_value, page=page)
     context = {
         'page_form': form,
