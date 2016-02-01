@@ -5,7 +5,7 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
     <meta charset="UTF-8">
-    <title></title>
+    <title>Search Books</title>
 </head>
 <body>
 {%  include "taric_books/header.html" %}
@@ -14,10 +14,16 @@
 <div id="main_body">
  <h1>TARIC BOOKS</h1>
 
-    <form action="{% url 'search' %}" method="post">
-{% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Search" />
+    <form id="form-wrapper" class="form-wrapper" action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+        <p>
+            {{ form_type }}
+        </p>
+        <p>
+            {{ form_value }}
+            <button type="submit" id="sub_button">Search</button>
+        </p>
+
 </form>
 </div><!-- /cuerpo -->
 
