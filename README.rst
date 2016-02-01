@@ -140,11 +140,13 @@ Top_.
 Testbed
 =======
 
-At this moment there is no Testbed to test the application but it will be available in a few days located in.
+There is a public execution of this project, you can find the application accessing the following link:
 
 .. code::
 
     http://retotaric.geonexus.es
+
+I hope you enjoy.
 
 Top_.
 
