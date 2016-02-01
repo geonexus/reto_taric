@@ -8,6 +8,7 @@ env:
     - COVERALLS_SERVICE_NAME=travis-ci
 
 script:
+  - pip install -r requirements.txt
   - coverage run --source='.' manage.py test taric_books
 
 after_success:
