@@ -1,6 +1,5 @@
 __author__ = 'Geon'
 import requests
-import isbn_utils
 from django.conf import settings
 from models import Struct
 
@@ -23,6 +22,7 @@ def search_by_isbn(isbn):
     response = send_request(query)
     # search_result = Struct(response.json())
     return response
+
 
 def send_request(query):
     url = settings.ISBNDB_API_URL

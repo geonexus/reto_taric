@@ -5,6 +5,7 @@ import requests
 import logging
 logger = logging.getLogger(__name__)
 
+
 def find_cover_url_by_ISBN(isbn):
     response = send_request(isbn)
     search_result = Struct(response.json())
@@ -15,7 +16,6 @@ def find_cover_url_by_ISBN(isbn):
         logger.warn("No book found in googlebooks with ISBN %s", isbn)
     except KeyError:
         logger.warn("Book found in googlebooks with ISBN %s but there is no cover", isbn)
-
 
 
 def send_request(query):

@@ -11,7 +11,7 @@ from taric_books import isbn_manager
 
 
 class simpleapp_tk(Tkinter.Tk):
-    def __init__(self,parent):
+    def __init__(self, parent):
         os.environ['DJANGO_SETTINGS_MODULE'] = 'reto_taric.settings'
         Tkinter.Tk.__init__(self, parent)
         self.parent = parent
@@ -22,24 +22,24 @@ class simpleapp_tk(Tkinter.Tk):
 
         self.entryVariable = Tkinter.StringVar()
         self.entry = Tkinter.Entry(self, textvariable=self.entryVariable)
-        self.entry.grid(column=0,row=0, sticky='EW')
+        self.entry.grid(column=0, row=0, sticky='EW')
         self.entry.bind("<Return>", self.OnPressEnter)
         self.entryVariable.set(u"Enter your book name here.")
 
-        button = Tkinter.Button(self,text=BUTTON_SEARCH_TEXT, command=self.OnButtonClick)
-        button.grid(column=1,row=0)
+        button = Tkinter.Button(self, text=BUTTON_SEARCH_TEXT, command=self.OnButtonClick)
+        button.grid(column=1, row=0)
 
         self.labelVariable = Tkinter.StringVar()
         label = Tkinter.Label(self, textvariable=self.labelVariable,
-                              anchor="w",fg="white",bg="blue")
-        label.grid(column=0,row=1,columnspan=2, sticky='EW')
+                              anchor="w", fg="white", bg="blue")
+        label.grid(column=0, row=1, columnspan=2, sticky='EW')
         self.labelVariable.set(u"Hello !")
 
         list_result_window = Tkinter.Tk()
         self.list_results = Tkinter.Listbox(list_result_window)
 
         self.grid_columnconfigure(0, weight=1)
-        self.resizable(True,False)
+        self.resizable(True, False)
         self.update()
         self.geometry(self.geometry())
         self.entry.focus_set()
@@ -65,8 +65,6 @@ class simpleapp_tk(Tkinter.Tk):
         for item in list:
             self.list_results.insert(Tkinter.END, item)
         self.list_results.pack()
-
-
 
 if __name__ == "__main__":
     app = simpleapp_tk(None)

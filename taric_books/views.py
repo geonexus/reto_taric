@@ -2,14 +2,16 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.utils.text import slugify
 from django.conf import settings
-from .forms import Search_form_type, Search_form_value, PageForm
+from .forms import SearchFormType, SearchFormValue, PageForm
 import isbn_manager
 import gbooks_covers
 
+
 def index(request):
-    form_type = Search_form_type()
-    form_value = Search_form_value()
+    form_type = SearchFormType()
+    form_value = SearchFormValue()
     return render(request, 'taric_books/index.html', {'form_type': form_type, 'form_value': form_value})
+
 
 def search(request):
     form = PageForm()
@@ -17,10 +19,9 @@ def search(request):
     search_type = request.POST['search_type']
 
     if search_value == "":
-        form_type = Search_form_type()
-        form_value = Search_form_value()
+        form_type = SearchFormType()
+        form_value = SearchFormValue()
         return render(request, 'taric_books/index.html', {'form_type': form_type, 'form_value': form_value})
-
 
     response = isbn_manager.search_by(search_type, search_value, page=None)
     print response
@@ -35,6 +36,7 @@ def search(request):
     }
 
     return render(request, 'taric_books/search_result.html', context)
+
 
 def search_page(request, search, search_type):
     form = PageForm()
@@ -53,6 +55,7 @@ def search_page(request, search, search_type):
 
     return render(request, 'taric_books/search_result.html', context)
 
+
 def isbn(request, isbn):
     response = isbn_manager.search_by("ISBN", isbn)
     cover_url = gbooks_covers.find_cover_url_by_ISBN(isbn)
@@ -63,11 +66,14 @@ def isbn(request, isbn):
 
     return render(request, 'taric_books/isbn.html', context)
 
+
 def taric(request):
     return render(request, 'taric_books/taric.html')
 
+
 def github(request):
     return render(request, 'taric_books/github.html')
+
 
 def about(request):
     return render(request, 'taric_books/about.html')

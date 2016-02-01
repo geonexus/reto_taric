@@ -10,12 +10,12 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': '',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'HOST': '',
         'PORT': '',                      # Set to empty string for default.
     }
 }
@@ -166,7 +166,7 @@ LOGGING = {
 ISBNDB_API_BASEURL = "http://isbndb.com/api/"
 ISBNDB_API_VERSION = "v2"
 ISBNDB_API_CONTENT_TYPE = "json"
-ISBNDB_API_KEY= "WV73ZETL"
+ISBNDB_API_KEY = "WV73ZETL"
 ISBNDB_API_URL = ISBNDB_API_BASEURL + ISBNDB_API_VERSION + "/" + ISBNDB_API_CONTENT_TYPE + "/" + ISBNDB_API_KEY + "/"
 
 GOOGLEBOOKS_API_URL = "https://www.googleapis.com/books/v1/volumes?q=isbn:"

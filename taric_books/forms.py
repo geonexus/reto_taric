@@ -3,12 +3,12 @@ from django import forms
 from reto_taric.constants import SEARCH_TYPES
 
 
-class Search_form_type(forms.Form):
+class SearchFormType(forms.Form):
     search_type = forms.ChoiceField(choices=SEARCH_TYPES,
                                 widget=forms.Select, label="Search filter")
 
 
-class Search_form_value(forms.Form):
+class SearchFormValue(forms.Form):
     search_value = forms.CharField(max_length=100, required=True, label="")
 
 

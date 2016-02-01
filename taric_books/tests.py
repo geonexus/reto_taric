@@ -21,6 +21,7 @@ from reto_taric.constants import UNIT_TEST_RESOURCES_FOLDER, FILE_NAME_AUTHOR_SE
 """ Class to test the interaction with isbndb
 """
 
+
 class isbn_client_tests(TestCase):
     # This method will be used by the mock to replace requests.get
 
@@ -68,6 +69,7 @@ class isbn_client_tests(TestCase):
         response = isbn_manager.search_by(self.filter_author, self.author)
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
+
     @SkipTest
     @patch('requests.get', side_effect=mocked_requests_get)
     def test_search_client_by_title(self, mock_get):
@@ -84,6 +86,7 @@ class isbn_client_tests(TestCase):
         response = isbn_manager.search_by(self.filter_isbn, self.ISBN)
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_ISBN_SEARCH_RESPONSE).read())["data"])
+
     @SkipTest
     @patch('requests.get', side_effect=mocked_requests_get)
     def test_search_client_by_publisher(self, mock_get):
@@ -92,6 +95,7 @@ class isbn_client_tests(TestCase):
         response = isbn_manager.search_by(self.title)
         self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
+
     @SkipTest
     @patch('requests.get', side_effect=mocked_requests_get)
     def test_search_client_by_topic(self, mock_get):
