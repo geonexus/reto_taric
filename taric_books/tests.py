@@ -109,8 +109,6 @@ class Taric_books_tests(TestCase):
     def test_search_client_by_author(self, mock_get):
         """Tests if method gets a list of books written by a provided author."""
 
-        # with patch.object(isbn_manager.requests, 'get', return_value=response) as mock_method:
-
         response = isbn_manager.search_by(self.filter_author, self.author)
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])

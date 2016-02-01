@@ -7,6 +7,10 @@ logger = logging.getLogger(__name__)
 
 
 def find_cover_url_by_isbn(isbn):
+    """This method recovers the thumbnail image url from googlebooks.
+    :return url if everything was ok
+    :return None if there is no image or book is not found"""
+
     response = send_request(isbn)
     search_result = Struct(response.json())
     try:
@@ -19,6 +23,8 @@ def find_cover_url_by_isbn(isbn):
 
 
 def send_request(query):
+    """This method sends a get request to the GoogleBooks API with a given query url."""
+
     url = settings.GOOGLEBOOKS_API_URL
     response = requests.get(url + query)
     return response
