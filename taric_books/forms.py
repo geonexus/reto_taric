@@ -2,11 +2,15 @@ __author__ = 'Geon'
 from django import forms
 from reto_taric.constants import SEARCH_TYPES
 
-class SearchForm(forms.Form):
 
+class Search_form_type(forms.Form):
     search_type = forms.ChoiceField(choices=SEARCH_TYPES,
-                                widget=forms.Select)
-    search_value = forms.CharField(label='Insert Text', max_length=100)
+                                widget=forms.Select, label="Search filter")
+
+
+class Search_form_value(forms.Form):
+    search_value = forms.CharField(max_length=100, required=True, label="")
+
 
 class PageForm(forms.Form):
     page_value = forms.IntegerField(label='Go Page')
