@@ -79,6 +79,7 @@ body {
 img.floating {
     float: right;
     margin-right: 1%;
+    max-width: 20%;
 }
 header {
     overflow: hidden;
