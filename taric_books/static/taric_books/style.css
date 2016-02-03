@@ -5,29 +5,24 @@ body {
     background-position: 50% -200px;
     background-repeat: no-repeat;
     background-image: url("images/brightness.png");
-
 }
-
 #background {
     padding-left: 180px;
     padding-right: 180px;
     padding-top: 1%;
 }
-
 #sup_container {
     -webkit-border-radius: 10px;
     -webkit-border-top-right-radius: 30px;
     -webkit-border-top-left-radius: 30px;
     -webkit-box-shadow: 0px 0px 10px black;
 }
-
 #header {
     background: #333;
     background: url("images/header_left.png") left no-repeat,
     url("images/header_right.png") right no-repeat, url("images/header.png"), #333;
     height: 120px;
     position: relative;
-
     border: #555 1px solid;
     border-left: #444 1px solid;
     border-top: #777 1px solid;
@@ -35,15 +30,12 @@ body {
     -webkit-border-top-right-radius: 30px;
     -webkit-border-top-left-radius: 30px;
 }
-
 #imglogo {
     margin-left: 20px;
 }
-
 #int_container {
     position: relative;
 }
-
 #main_body {
     background-position: right;
     background-repeat: repeat-y;
@@ -56,12 +48,10 @@ body {
     padding-right: 1%;
     padding-bottom: 2%;
     margin-left: 180px;
-    margin-right:180px;
+    margin-right: 180px;
     border: #023a7c 5px solid;
     text-align: center;
-
 }
-
 #footer {
     margin: auto;
     margin-top: 1%;
@@ -74,8 +64,7 @@ body {
     width: 800px;
     -webkit-box-shadow: 0px -1px 0px #000;
 }
-
-#footer p{
+#footer p {
     margin: auto;
     margin-top: 1em;
     padding-top: .5em;
@@ -87,54 +76,52 @@ body {
     width: 800px;
     -webkit-box-shadow: 0px -1px 0px #000;
 }
-
 img.floating {
     float: right;
     margin-right: 1%;
 }
-
 header {
-    overflow:hidden; /* Eliminamos errores de float */
+    overflow: hidden;
+    /* Eliminamos errores de float */
 }
-
 .wrapper {
-    width:90%; /* Establecemos que el ancho sera del 90% */
-    max-width:1000px; /* Aqui le decimos que el ancho máximo sera de 1000px */
-    margin:auto; /* Centramos los elementos */
-    overflow:hidden; /* Eliminamos errores de float */
+    width: 90%;
+    /* Establecemos que el ancho sera del 90% */
+    
+    max-width: 1000px;
+    /* Aqui le decimos que el ancho máximo sera de 1000px */
+    
+    margin: auto;
+    /* Centramos los elementos */
+    
+    overflow: hidden;
+    /* Eliminamos errores de float */
 }
-
 header nav {
-    float:right;
+    float: right;
 }
-
 header nav a {
-    display:inline-block;
-    color:#fff;
-    text-decoration:none;
-    padding:10px 20px;
-    line-height:normal;
-    font-size:20px;
-    font-weight:bold;
-    -webkit-transition:all 500ms ease;
-    -o-transition:all 500ms ease;
-    transition:all 500ms ease;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
 }
-
 header nav a:hover {
-    background:#36557a;
-    border-radius:50px;
+    background: #36557a;
+    border-radius: 50px;
 }
-
-
 strong {
     font-weight: bold;
 }
-
 em {
     font-style: italic;
 }
-
 table {
     background: #f5f5f5;
     border-collapse: separate;
@@ -143,104 +130,88 @@ table {
     line-height: 24px;
     text-align: left;
     margin: auto;
-
 }
-
 table.book_details {
     width: 50%;
 }
-
 th {
-	background: linear-gradient(#777, #444);
-	border-left: 1px solid #555;
-	border-right: 1px solid #777;
-	border-top: 1px solid #555;
-	border-bottom: 1px solid #333;
-	box-shadow: inset 0 1px 0 #999;
-	color: #fff;
+    background: linear-gradient(#777, #444);
+    border-left: 1px solid #555;
+    border-right: 1px solid #777;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #333;
+    box-shadow: inset 0 1px 0 #999;
+    color: #fff;
     font-weight: bold;
-	padding: 10px 15px;
-	position: relative;
-	text-shadow: 0 1px 0 #000;
+    padding: 10px 15px;
+    position: relative;
+    text-shadow: 0 1px 0 #000;
 }
-
 th:after {
-	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
-	content: '';
-	display: block;
-	height: 25%;
-	left: 0;
-	margin: 1px 0 0 0;
-	position: absolute;
-	top: 25%;
-	width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .08));
+    content: '';
+    display: block;
+    height: 25%;
+    left: 0;
+    margin: 1px 0 0 0;
+    position: absolute;
+    top: 25%;
+    width: 100%;
 }
-
 th:first-child {
-	border-left: 1px solid #777;
-	box-shadow: inset 1px 1px 0 #999;
+    border-left: 1px solid #777;
+    box-shadow: inset 1px 1px 0 #999;
 }
-
 th:last-child {
-	box-shadow: inset -1px 1px 0 #999;
+    box-shadow: inset -1px 1px 0 #999;
 }
-
 td {
-	border-right: 1px solid #fff;
-	border-left: 1px solid #e8e8e8;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #e8e8e8;
-	padding: 10px 15px;
-	position: relative;
-	transition: all 300ms;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #e8e8e8;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 300ms;
 }
-
 td:first-child {
-	box-shadow: inset 1px 0 0 #fff;
+    box-shadow: inset 1px 0 0 #fff;
 }
-
 td:last-child {
-	border-right: 1px solid #e8e8e8;
-	box-shadow: inset -1px 0 0 #fff;
+    border-right: 1px solid #e8e8e8;
+    box-shadow: inset -1px 0 0 #fff;
 }
-
 tr:last-of-type td {
-	box-shadow: inset 0 -1px 0 #fff;
+    box-shadow: inset 0 -1px 0 #fff;
 }
-
 tr:last-of-type td:first-child {
-	box-shadow: inset 1px -1px 0 #fff;
+    box-shadow: inset 1px -1px 0 #fff;
 }
-
 tr:last-of-type td:last-child {
-	box-shadow: inset -1px -1px 0 #fff;
+    box-shadow: inset -1px -1px 0 #fff;
 }
-
 tbody:hover td {
-	color: transparent;
-	text-shadow: 0 0 0px #aaa;
+    color: transparent;
+    text-shadow: 0 0 0px #aaa;
 }
-
 tbody:hover tr:hover td {
-	color: #000;
-	text-shadow: 0 1px 0 #fff;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
 }
-
 div.page_form {
     padding-top: 1%;
 }
-
 /* Form wrapper styling */
+
 .form-wrapper {
     width: 60%;
     padding: 15px;
     margin: auto;
     background: #444;
-    background: rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, .2);
     border-radius: 10px;
-    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
 }
-
 /* Form text input */
 
 .form-wrapper input {
@@ -253,32 +224,28 @@ div.page_form {
     background: #eee;
     border-radius: 3px 0 0 3px;
 }
-
 .form-wrapper input:focus {
     outline: 0;
     background: #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
 }
-
 .form-wrapper input::-webkit-input-placeholder {
-   color: #999;
-   font-weight: normal;
-   font-style: italic;
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
 }
-
 .form-wrapper input:-moz-placeholder {
     color: #999;
     font-weight: normal;
     font-style: italic;
 }
-
 .form-wrapper input:-ms-input-placeholder {
     color: #999;
     font-weight: normal;
     font-style: italic;
 }
-
 /* Form submit button */
+
 .form-wrapper button {
     overflow: visible;
     position: relative;
@@ -287,7 +254,6 @@ div.page_form {
     padding: 0px;
     margin-top: -53px;
     margin-right: 10%;
-
     cursor: pointer;
     height: 40px;
     width: 28%;
@@ -296,20 +262,19 @@ div.page_form {
     text-transform: uppercase;
     background: #d83c3c;
     border-radius: 0 3px 3px 0;
-    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 }
-
-.form-wrapper button:hover{
+.form-wrapper button:hover {
     background: #e54040;
 }
-
 .form-wrapper button:active,
-.form-wrapper button:focus{
+.form-wrapper button:focus {
     background: #c42f2f;
-	outline: 0;
+    outline: 0;
 }
-
-.form-wrapper button:before { /* left arrow */
+.form-wrapper button:before {
+    /* left arrow */
+    
     content: '';
     position: absolute;
     border-width: 8px 8px 8px 0;
@@ -318,29 +283,26 @@ div.page_form {
     top: 12px;
     left: -6px;
 }
-
-.form-wrapper button:hover:before{
+.form-wrapper button:hover:before {
     border-right-color: #e54040;
 }
-
 .form-wrapper button:focus:before,
-.form-wrapper button:active:before{
-        border-right-color: #c42f2f;
+.form-wrapper button:active:before {
+    border-right-color: #c42f2f;
 }
-
-.form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+.form-wrapper button::-moz-focus-inner {
+    /* remove extra button spacing for Mozilla Firefox */
+    
     border: 0;
     padding: 0;
 }
-
 .subject {
     background: white;
     margin-top: 10px;
     -webkit-border-radius: 15px;
-    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.4);
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
     border-bottom: #222 3px solid;
 }
-
 .subject_name {
     padding: 20px 15px 10px 15px;
     border-left: #111 5px solid;
@@ -348,15 +310,12 @@ div.page_form {
     background-position: bottom;
     position: relative;
     -webkit-border-radius: 15px;
-
     -webkit-transition: all 500ms ease-out;
 }
-
 .collapsed .subject_name {
     margin-top: 5px;
     padding: 10px 15px 5px 15px;
 }
-
 .subject_name .collapse {
     position: absolute;
     display: block;
@@ -370,19 +329,15 @@ div.page_form {
     text-indent: 25px;
     cursor: default;
 }
-
 .subject_name .collapse:hover {
     background-position: 0px 50px;
 }
-
 .collapsed .subject_name .collapse {
     background-position: 0px 75px;
 }
-
 .collapsed .subject_name .collapse:hover {
     background-position: 0px 0px;
 }
-
 .subject_name h3 {
     padding: 0;
     font-size: large;
@@ -392,7 +347,6 @@ div.page_form {
     -webkit-transition-property: text-shadow;
     -webkit-transition-duration: .3s;
 }
-
 .subject_name h3 a {
     color: white;
     text-decoration: none;
@@ -400,32 +354,26 @@ div.page_form {
     -webkit-transition-property: text-shadow;
     -webkit-transition-duration: .3s;
 }
-
 .subject_name h3 a:hover {
     text-shadow: 0 0 4px white;
     -webkit-transition-property: text-shadow;
     -webkit-transition-duration: .3s;
 }
-
 .subject_list {
     padding-bottom: 10px;
     overflow: hidden;
     -webkit-transition: all 500ms ease-out;
 }
-
 .subject_list a:hover {
     color: #000;
 }
-
 .collapsed .subject_list {
-
     max-height: 0;
     min-height: 0;
     padding: 0;
     border-top: none;
     opacity: 0;
 }
-
 /* Some styling parameters were modified and inspired from following websites:
 - http://speckyboy.com/2012/02/15/how-to-build-a-stylish-css3-search-box/
 
