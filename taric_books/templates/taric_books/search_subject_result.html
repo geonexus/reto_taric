@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
+        <script src="{% static 'taric_books/script.js' %}" type="text/javascript" charset="utf-8"></script>
+        <meta charset="UTF-8">
+        <title>Search Books</title>
+    </head>
+    <body>
+        {%  include "taric_books/header.html" %}
+        <div id="main_body">
+        <h1> Subject search</h1>
+        {% if data_list %}
+            {% for subject in data_list %}
+                <div class="collapsed" id='subject-{{ subject.subject_id }}' >
+                    <div class='subject_name'>
+                        <h3>{{ subject.name }}</h3>
+                        <a href='javascript:collapse_post("subject-{{ subject.subject_id }}")' class='collapse'>Collapse</a>
+                    </div>
+                    <div class="subject_list">
+                        {% for data in subject.book_ids %}
+                            <a href="/taric_books/{{ data }}/">{{ data }}</a><br />
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="page_form">
+                Page {{ current_page }} from {{ page_count }}
+                <form action="{% url 'search_page' search=search_value search_type=search_type %}" method="post">
+                {% csrf_token %}
+                        {{ page_form }}
+                    <input type="submit" value="Go" />
+                </form>
+            </div>
+        {% else %}
+            <p>No subjects results available.</p>
+        {% endif %}
+        </div>
+        {%  include "taric_books/footer.html" %}
+    </body>
+</html>

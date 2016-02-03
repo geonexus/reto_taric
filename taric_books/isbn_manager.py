@@ -9,8 +9,14 @@ def search_by(search_type, search_value, page=None):
     :param search_type Filter to perform the search (author_name, ISBN, publisher_name, title, subject)
     :return Struct with the information about the search."""
 
-    if search_type == "ISBN":
+    if search_type == "book":
         query = "book/" + search_value
+        response = send_request(query)
+    elif search_type == "subject":
+        if page:
+            query = "subjects?q=" + search_value + "&p=" + page
+        else:
+            query = "subjects?q=" + search_value
         response = send_request(query)
     else:
         if page:

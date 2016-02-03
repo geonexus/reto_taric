@@ -330,6 +330,100 @@ div.page_form {
     border: 0;
     padding: 0;
 }
+
+.subject {
+    background: white;
+    margin-top: 10px;
+    -webkit-border-radius: 15px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.4);
+    border-bottom: #222 3px solid;
+}
+
+.subject_name {
+    padding: 20px 15px 10px 15px;
+    border-left: #111 5px solid;
+    background-image: url("images/subjectbar.png");
+    background-position: bottom;
+    position: relative;
+    -webkit-border-radius: 15px;
+
+    -webkit-transition: all 500ms ease-out;
+}
+
+.collapsed .subject_name {
+    margin-top: 5px;
+    padding: 10px 15px 5px 15px;
+}
+
+.subject_name .collapse {
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 8px;
+    height: 25px;
+    width: 25px;
+    overflow: hidden;
+    background: url("images/collapse.png");
+    background-position: 0px 25px;
+    text-indent: 25px;
+    cursor: default;
+}
+
+.subject_name .collapse:hover {
+    background-position: 0px 50px;
+}
+
+.collapsed .subject_name .collapse {
+    background-position: 0px 75px;
+}
+
+.collapsed .subject_name .collapse:hover {
+    background-position: 0px 0px;
+}
+
+.subject_name h3 {
+    padding: 0;
+    font-size: large;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 black;
+    -webkit-transition-property: text-shadow;
+    -webkit-transition-duration: .3s;
+}
+
+.subject_name h3 a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 black;
+    -webkit-transition-property: text-shadow;
+    -webkit-transition-duration: .3s;
+}
+
+.subject_name h3 a:hover {
+    text-shadow: 0 0 4px white;
+    -webkit-transition-property: text-shadow;
+    -webkit-transition-duration: .3s;
+}
+
+.subject_list {
+    padding-bottom: 10px;
+    overflow: hidden;
+    -webkit-transition: all 500ms ease-out;
+}
+
+.subject_list a:hover {
+    color: #000;
+}
+
+.collapsed .subject_list {
+
+    max-height: 0;
+    min-height: 0;
+    padding: 0;
+    border-top: none;
+    opacity: 0;
+}
+
 /* Some styling parameters were modified and inspired from following websites:
 - http://speckyboy.com/2012/02/15/how-to-build-a-stylish-css3-search-box/
 

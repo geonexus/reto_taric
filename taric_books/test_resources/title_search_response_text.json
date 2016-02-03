@@ -1,0 +1,330 @@
+{
+   "data" : [
+      {
+         "title_latin" : "Rina de gatos",
+         "publisher_id" : "booket",
+         "publisher_text" : "BOOKET",
+         "language" : "",
+         "publisher_name" : "BOOKET",
+         "isbn10" : "8408105620",
+         "dewey_decimal" : "",
+         "isbn13" : "9788408105626",
+         "notes" : "",
+         "physical_description_text" : "5.1\"x7.9\"x1.0\"; 0.7 lb",
+         "summary" : "",
+         "lcc_number" : "",
+         "book_id" : "rina_de_gatos",
+         "subject_ids" : [
+            "literature_fiction"
+         ],
+         "title" : "Riï¿½a de gatos",
+         "marc_enc_level" : "~",
+         "author_data" : [
+            {
+               "id" : "mendoza_eduardo",
+               "name" : "Mendoza, Eduardo"
+            }
+         ],
+         "title_long" : "",
+         "dewey_normal" : "0",
+         "edition_info" : "Perfect Paperback; 2011-10-01",
+         "awards_text" : "",
+         "urls_text" : ""
+      },
+      {
+         "author_data" : [
+            {
+               "id" : "mendoza_eduardo",
+               "name" : "Mendoza, Eduardo"
+            }
+         ],
+         "marc_enc_level" : "~",
+         "subject_ids" : [
+            "literature_fiction_genre_fiction_historical",
+            "literature_fiction_literary"
+         ],
+         "title" : "Rina de Gatos, Madrid 1936",
+         "urls_text" : "",
+         "edition_info" : "Paperback; 2011-02-01",
+         "awards_text" : "",
+         "dewey_normal" : "813",
+         "title_long" : "Rina de Gatos, Madrid 1936 (Spanish Edition)",
+         "notes" : "",
+         "dewey_decimal" : "813",
+         "isbn13" : "9786070705984",
+         "language" : "",
+         "publisher_text" : "Planeta Publishing",
+         "isbn10" : "607070598X",
+         "publisher_name" : "Planeta Publishing",
+         "title_latin" : "Rina de Gatos, Madrid 1936",
+         "publisher_id" : "planeta_publishing",
+         "book_id" : "rina_de_gatos_madrid_1936",
+         "lcc_number" : "",
+         "physical_description_text" : "434 pages",
+         "summary" : "UN INGLï¿½S LLAMADO ANTHONY WHITELANDS LLEGA A BORDO DE UN TREN AL MADRID CONVULSO DE LA PRIMAVERA DE 1936. DEBERï¿½ AUTENTICAR UN CUADRO DESCONOCIDO, PERTENECIENTE A UN AMIGO DE JOSï¿½ ANTONIO PRIMO DE RIVERA, CUYO VALOR ECONï¿½MICO PUEDE RESULTAR DETERMINANTE PARA FAVORECER UN CAMBIO POLï¿½TICO CRUCIAL EN LA HISTORIA DE ESPAï¿½A. TURBULENTOS AMORES CON MUJERES DE DISTINTAS CLASES SOCIALES DISTRAEN AL CRï¿½TICO DE ARTE SIN DARLE TIEMPO A CALIBRAR Cï¿½MO SE VAN MULTIPLICANDO SUS PERSEGUIDORES: POLICï¿½AS, DIPLOMï¿½TICOS, POLï¿½TICOS Y ESPï¿½AS, EN UNA ATMï¿½SFERA DE CONSPIRACIï¿½N Y DE ALGARADA. LAS EXCEPCIONALES DOTES NARRATIVAS DE EDUARDO MENDOZA COMBINAN A LA PERFECCIï¿½N LA GRAVEDAD DE LOS SUCESOS NARRADOS CON LA PRESENCIA, MUY SUTIL, DE SU CONOCIDO SENTIDO DEL HUMOR, YA QUE TODA TRAGEDIA ES TAMBIï¿½N PARTE DE LA COMEDIA HUMANA."
+      },
+      {
+         "edition_info" : "Hardcover; 2010-11-05",
+         "awards_text" : "",
+         "urls_text" : "",
+         "title_long" : "",
+         "dewey_normal" : "0",
+         "author_data" : [
+            {
+               "id" : "mendoza_eduardo",
+               "name" : "Mendoza, Eduardo"
+            }
+         ],
+         "title" : "RIï¿½A DE GATOS MADRID 1936 premio planeta 2010",
+         "subject_ids" : [
+            "literature_fiction"
+         ],
+         "marc_enc_level" : "~",
+         "lcc_number" : "",
+         "book_id" : "rina_de_gatos_madrid_1936_premio_planeta_2010",
+         "summary" : "",
+         "physical_description_text" : "6.2\"x9.1\"x1.3\"; 1.7 lb",
+         "isbn13" : "9788408097259",
+         "dewey_decimal" : "",
+         "notes" : "",
+         "publisher_id" : "planeta",
+         "title_latin" : "RINA DE GATOS MADRID 1936 premio planeta 2010",
+         "publisher_name" : "PLANETA",
+         "isbn10" : "8408097253",
+         "language" : "",
+         "publisher_text" : "PLANETA"
+      },
+      {
+         "subject_ids" : [
+            "federal_government_united_states_congresses"
+         ],
+         "title" : "Power divided",
+         "marc_enc_level" : "",
+         "author_data" : [
+            {
+               "name" : "Scheiber, Harry N.",
+               "id" : "scheiber_harry_n"
+            },
+            {
+               "name" : "Feeley, Malcolm",
+               "id" : "feeley_malcolm"
+            }
+         ],
+         "title_long" : "Power divided: essays on the theory and practice of federalism",
+         "dewey_normal" : "320.473",
+         "edition_info" : "",
+         "awards_text" : "",
+         "urls_text" : "",
+         "title_latin" : "Power divided",
+         "publisher_id" : "institute_of_governmental__a06",
+         "publisher_text" : "Berkeley, CA : Institute of Governmental Studies, University of California at Berkeley, 1989.",
+         "language" : "eng",
+         "isbn10" : "0877723184",
+         "publisher_name" : "Institute of Governmental Studies, University of California at Berkeley",
+         "dewey_decimal" : "320.473",
+         "isbn13" : "9780877723189",
+         "notes" : "\"Papers from the Third Berkeley Seminar on Federalism\"--Cover.\n\nSeminar held November 1988.\n\nIncludes bibliographical references.",
+         "physical_description_text" : "xiv, 162 p. ; 24 cm.",
+         "summary" : "",
+         "lcc_number" : "JK325",
+         "book_id" : "power_divided"
+      },
+      {
+         "author_data" : [
+            {
+               "name" : "Lewis, Carolyn Diana",
+               "id" : "lewis_carolyn_diana"
+            }
+         ],
+         "marc_enc_level" : "~",
+         "title" : "Land & Light Workshop: Painting Mood & Atmosphere In Oils",
+         "subject_ids" : [],
+         "urls_text" : "",
+         "edition_info" : "Hardcover; 2005-09-15",
+         "awards_text" : "",
+         "dewey_normal" : "0",
+         "title_long" : "Land & Light Workshop: Painting Mood & Atmosphere In Oils (Land & Light Workshop)",
+         "notes" : "",
+         "isbn13" : "9781581806311",
+         "dewey_decimal" : "",
+         "isbn10" : "1581806310",
+         "publisher_name" : "North Light Books",
+         "language" : "",
+         "publisher_text" : "North Light Books",
+         "publisher_id" : "north_light_books",
+         "title_latin" : "Land & Light Workshop: Painting Mood & Atmosphere In Oils",
+         "book_id" : "land_light_workshop_painting_mood_atmosphere_in_oils",
+         "lcc_number" : "",
+         "summary" : "Combining technical mastery with emotional impact to create a powerful, evocative scene is the ultimate goal of every oil landscape painter. Painting Mood and Atmosphere in Oils, the second title in North Light's Land & Light Workshop series, helps painters achieve that goal with: -13 step-by-step demonstrations covering a variety of subjects and scenes -A practical, down-to-earth guide to the art of capturing emotion, including valuable tips on painting from memory and painting from photos -Resourceful sections on oil painting basics, including brushwork, composition and color mixing Painting Mood and Atmosphere in Oils will help readers paint the landscapes of their heart.",
+         "physical_description_text" : "128 pages"
+      },
+      {
+         "publisher_id" : "les_presses_laurentiennes",
+         "title_latin" : "choix de Rina Lasnier dans l'oeuvre de Rina Lasnier",
+         "publisher_text" : "[Notre-Dame-des-Laurentides] : Les Presses laurentiennes, 1981.",
+         "language" : "fre",
+         "publisher_name" : "Les Presses laurentiennes",
+         "isbn10" : "2890150259",
+         "dewey_decimal" : "",
+         "isbn13" : "9782890150256",
+         "notes" : "",
+         "physical_description_text" : "78 p. : port. ; 19 cm.",
+         "summary" : "",
+         "lcc_number" : "",
+         "book_id" : "le_choix_de_rina_lasnier_dans_loeuvre_de_rina_lasnier",
+         "subject_ids" : [],
+         "title" : "Le choix de Rina Lasnier dans l'oeuvre de Rina Lasnier",
+         "marc_enc_level" : "i",
+         "author_data" : [
+            {
+               "name" : "Lasnier, Rina",
+               "id" : "lasnier_rina"
+            }
+         ],
+         "title_long" : "",
+         "dewey_normal" : "0",
+         "awards_text" : "",
+         "edition_info" : "",
+         "urls_text" : ""
+      },
+      {
+         "dewey_decimal" : "",
+         "isbn13" : "9780134336855",
+         "notes" : "Includes indexes.\n\nGeography tools and concepts -- The ancient world -- Africa --Latin America -- United States and Canada -- Europe and Russia -- Asic and the Pacific -- Medieval times to today.\n\nThe Eastern Hemisphere volume is comprised of Geography tools and concepts, Europe and Russia, Africa, and Asia and the Pacific.\n\nThe Western Hemisphere is comprised of Geography tools and concepts, The United States and Cananda, and Latin America.\n\nGeography tools and concepts -- The ancient world -- Africa --Latin America -- United States and Canada -- Europe and Russia -- Asic and the Pacific -- Medieval times to today.",
+         "title_latin" : "Prentice Hall world explorer",
+         "publisher_id" : "prentice_hall",
+         "publisher_text" : "Needham, Mass. : Prentice Hall, c1998.",
+         "language" : "eng",
+         "publisher_name" : "Prentice Hall",
+         "isbn10" : "0134336852",
+         "lcc_number" : "",
+         "book_id" : "prentice_hall_world_explorer_a10",
+         "physical_description_text" : "10 v. : col. ill., col. maps ; 29 cm.",
+         "summary" : "",
+         "author_data" : [
+            {
+               "id" : "jacobs_heidi_hayes",
+               "name" : "Jacobs, Heidi Hayes"
+            },
+            {
+               "id" : "randolph_brenda",
+               "name" : "Randolph, Brenda"
+            },
+            {
+               "name" : "LeVasseur, Michal L.",
+               "id" : "levasseur_michal_l"
+            }
+         ],
+         "subject_ids" : [
+            "geography",
+            "civilization"
+         ],
+         "title" : "Prentice Hall world explorer",
+         "marc_enc_level" : "^",
+         "edition_info" : "(Africa)",
+         "awards_text" : "",
+         "urls_text" : "",
+         "title_long" : "",
+         "dewey_normal" : "0"
+      },
+      {
+         "isbn13" : "9780315126350",
+         "dewey_decimal" : "",
+         "notes" : "",
+         "publisher_id" : "bibliotheque_nationale_du_cana",
+         "title_latin" : "Structure thematique de La salle des reves de Rina Lasnier",
+         "publisher_name" : "Bibliothï¿½que nationale du Canada",
+         "isbn10" : "0315126353",
+         "publisher_text" : "Ottawa : Bibliothï¿½que nationale du Canada, 1984.",
+         "language" : "fre",
+         "lcc_number" : "",
+         "book_id" : "structure_thematique_de_la_salle_des_reves_de_rina_lasnier",
+         "summary" : "",
+         "physical_description_text" : "2 microfiches (108 im.) ; 11 X 15 cm.",
+         "author_data" : [
+            {
+               "id" : "desgagne_serge",
+               "name" : "Desgagnï¿½, Serge"
+            }
+         ],
+         "title" : "Structure thï¿½matique de La salle des rï¿½ves de Rina Lasnier",
+         "subject_ids" : [],
+         "marc_enc_level" : "5",
+         "awards_text" : "",
+         "edition_info" : "",
+         "urls_text" : "",
+         "title_long" : "",
+         "dewey_normal" : "0"
+      },
+      {
+         "urls_text" : "",
+         "edition_info" : "Paperback; 1998-11",
+         "awards_text" : "",
+         "dewey_normal" : "0",
+         "title_long" : "Razas de Gatos (Spanish Edition)",
+         "author_data" : [
+            {
+               "id" : "cutts_paddy",
+               "name" : "Cutts, Paddy"
+            }
+         ],
+         "marc_enc_level" : "~",
+         "title" : "Razas de Gatos",
+         "subject_ids" : [
+            "home_garden_animal_care_pets_cats_general",
+            "nonfiction_foreign_language_nonfiction_spanish"
+         ],
+         "book_id" : "razas_de_gatos",
+         "lcc_number" : "",
+         "summary" : "",
+         "physical_description_text" : "",
+         "notes" : "",
+         "isbn13" : "9788489675025",
+         "dewey_decimal" : "",
+         "publisher_name" : "Zendrera Zariquiey",
+         "isbn10" : "8489675023",
+         "publisher_text" : "Zendrera Zariquiey",
+         "language" : "",
+         "publisher_id" : "zendrera_zariquiey",
+         "title_latin" : "Razas de Gatos"
+      },
+      {
+         "author_data" : [
+            {
+               "id" : "vonnegut_kurt",
+               "name" : "Vonnegut, Kurt"
+            }
+         ],
+         "title" : "Cuna de Gato",
+         "subject_ids" : [
+            "literature_fiction_authors_a_z_v_vonnegut_jr_kurt",
+            "literature_fiction_foreign_language_fiction_spanish",
+            "literature_fiction_contemporary",
+            "literature_fiction_general_general"
+         ],
+         "marc_enc_level" : "~",
+         "awards_text" : "",
+         "edition_info" : "Paperback; 2003-09",
+         "urls_text" : "",
+         "title_long" : "Cuna de Gato (Spanish Edition)",
+         "dewey_normal" : "0",
+         "isbn13" : "9788433923158",
+         "dewey_decimal" : "",
+         "notes" : "",
+         "title_latin" : "Cuna de Gato",
+         "publisher_id" : "anagrama",
+         "publisher_name" : "Anagrama",
+         "isbn10" : "8433923153",
+         "publisher_text" : "Anagrama",
+         "language" : "",
+         "lcc_number" : "",
+         "book_id" : "cuna_de_gato",
+         "summary" : "",
+         "physical_description_text" : ""
+      }
+   ],
+   "page_count" : 55336,
+   "result_count" : 553354,
+   "index_searched" : "title",
+   "current_page" : 1
+}

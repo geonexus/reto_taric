@@ -18,7 +18,8 @@ import gbooks_covers
 from reto_taric.constants import UNIT_TEST_RESOURCES_FOLDER, FILE_NAME_AUTHOR_SEARCH_RESPONSE, \
      FILE_NAME_AUTHOR_SEARCH_PAGE_RESPONSE, \
     FILE_NAME_ISBN_SEARCH_RESPONSE, FILE_NAME_COVER_SEARCH_RESPONSE, FILE_NAME_COVER_SEARCH_NO_IMAGE_RESPONSE,\
-    FILE_NAME_COVER_SEARCH_NO_BOOK_RESPONSE
+    FILE_NAME_COVER_SEARCH_NO_BOOK_RESPONSE, FILE_NAME_TITLE_SEARCH_RESPONSE, FILE_NAME_PUBLISHER_SEARCH_RESPONSE, \
+    FILE_NAME_SUBJECT_SEARCH_RESPONSE, FILE_NAME_SUBJECT_SEARCH_PAGE_RESPONSE
 import reto_taric.wsgi as wsgi
 from django.test.client import RequestFactory
 
@@ -58,13 +59,18 @@ class Taric_books_tests(TestCase):
     def setUp(self):
         self.author = "Eduardo Mendoza"
         self.filter_author = "author_name"
-        self.filter_isbn = "ISBN"
+        self.filter_isbn = "book"  # filtering by book includes ISBN direct search and title direct search
+        self.filter_title = "title"
+        self.filter_publisher = "publisher_name"
+        self.filter_subject = "subject"
 
         self.title = "Rina de gatos"
         self.ISBN = "9788408105626"
         self.ISBN_for_cover = "9788432291395"
         self.ISBN_no_cover = "9781582346816"
         self.ISBN_no_book_cover = "0000000000000"
+        self.subject = "computer_science"
+        self.publisher = "Salamandra"
 
     def mocked_requests_get(*args, **kwargs):
         """ mocked_requests_get defines all mocked responses when a requests is performed.
@@ -78,6 +84,11 @@ class Taric_books_tests(TestCase):
                 return self.json_data
 
         query_author = "books?q=" + "Eduardo Mendoza" + "&i=" + "author_name"
+        query_title = "books?q=" + "Rina de gatos" + "&i=" + "title"
+        query_publisher = "books?q=" + "Salamandra" + "&i=" + "publisher_name"
+
+        query_subject = "subjects?q=" + "computer_science"
+        query_subject_page = "subjects?q=" + "computer_science" + "&p=2"
         query_author_page = "books?q=" + "Eduardo Mendoza" + "&i=" + "author_name" + "&p=2"
         query_isbn = "book/" + "9788408105626"
         ISBN_with_cover = "9788432291395"
@@ -93,6 +104,18 @@ class Taric_books_tests(TestCase):
         elif args[0] == settings.ISBNDB_API_URL + query_isbn:
             return MockResponse(json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                 FILE_NAME_ISBN_SEARCH_RESPONSE).read()), 200)
+        elif args[0] == settings.ISBNDB_API_URL + query_title:
+            return MockResponse(json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                FILE_NAME_TITLE_SEARCH_RESPONSE).read()), 200)
+        elif args[0] == settings.ISBNDB_API_URL + query_publisher:
+            return MockResponse(json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                FILE_NAME_PUBLISHER_SEARCH_RESPONSE).read()), 200)
+        elif args[0] == settings.ISBNDB_API_URL + query_subject:
+            return MockResponse(json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                FILE_NAME_SUBJECT_SEARCH_RESPONSE).read()), 200)
+        elif args[0] == settings.ISBNDB_API_URL + query_subject_page:
+            return MockResponse(json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                FILE_NAME_SUBJECT_SEARCH_PAGE_RESPONSE).read()), 200)
         elif args[0] == settings.GOOGLEBOOKS_API_URL + ISBN_with_cover:
             return MockResponse(json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                 FILE_NAME_COVER_SEARCH_RESPONSE).read()), 200)
@@ -121,14 +144,13 @@ class Taric_books_tests(TestCase):
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_PAGE_RESPONSE).read())["data"])
 
-    @SkipTest
     @patch('requests.get', side_effect=mocked_requests_get)
     def test_search_client_by_title(self, mock_get):
         """Tests if method gets a list of books that match with the title."""
 
-        response = isbn_manager.search_by(self.title)
-        self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
-                                                   FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
+        response = isbn_manager.search_by(self.filter_title, self.title)
+        self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                   FILE_NAME_TITLE_SEARCH_RESPONSE).read())["data"])
 
     @patch('requests.get', side_effect=mocked_requests_get)
     def test_search_client_by_isbn(self, mock_get):
@@ -138,23 +160,29 @@ class Taric_books_tests(TestCase):
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_ISBN_SEARCH_RESPONSE).read())["data"])
 
-    @SkipTest
     @patch('requests.get', side_effect=mocked_requests_get)
     def test_search_client_by_publisher(self, mock_get):
         """Tests if method gets a list of books that match with the publisher."""
 
-        response = isbn_manager.search_by(self.title)
-        self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
-                                                   FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
+        response = isbn_manager.search_by(self.filter_publisher, self.publisher)
+        self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                   FILE_NAME_PUBLISHER_SEARCH_RESPONSE).read())["data"])
 
-    @SkipTest
     @patch('requests.get', side_effect=mocked_requests_get)
-    def test_search_client_by_topic(self, mock_get):
-        """Tests if method gets a list of books that match with the topic."""
+    def test_search_client_by_subject(self, mock_get):
+        """Tests if method gets a list of books that match with the subject."""
 
-        response = isbn_manager.search_by(self.title)
-        self.assertEqual(response, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
-                                                   FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
+        response = isbn_manager.search_by(self.filter_subject, self.subject)
+        self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                   FILE_NAME_SUBJECT_SEARCH_RESPONSE).read())["data"])
+
+    @patch('requests.get', side_effect=mocked_requests_get)
+    def test_search_client_by_subject_page2(self, mock_get):
+        """Tests if method gets the page 2 of a list of books that match with the subject."""
+
+        response = isbn_manager.search_by(self.filter_subject, self.subject, page="2")
+        self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
+                                                   FILE_NAME_SUBJECT_SEARCH_PAGE_RESPONSE).read())["data"])
 
     def test_load_index(self):
         """Tests if method load the index page."""

@@ -1,11 +1,13 @@
 <div id="footer">
-    Taric Books - Madrid, 1st February of 2016
+    {% if search_value %}
+        "This is the result of search" {{ search_value }} in {{ search_type }}
+    {% endif %}
+    <p>
+    Taric Books - Madrid, 03/02/2016
+    </p>
     <p>
         <a href="http://validator.w3.org/check?uri=referer">
                 <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" />
         </a>
     </p>
-       {% if search_value %}
-            "This is the result of search" search_value
-       {% endif %}
 </div>

@@ -17,6 +17,6 @@ urlpatterns = [
         # ex: /taric_books/search_page/search
     url(r'^search_page/(?P<search>[-\w]+)/(?P<search_type>[-\w]+)/$', views.search_page, name='search_page'),
     # ex: /taric_books/isbn/
-    url(r'^(?P<isbn>[-\w]+)/$', views.isbn, name='isbn'),
+    url(r'^(?P<value>[-\w]+)/$', views.isbn, name='isbn'),
 
 ]
