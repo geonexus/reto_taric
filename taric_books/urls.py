@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'^about/$', views.about, name='about'),
     # ex: /taric_books/search/
     url(r'^search/$', views.search, name='search'),
-        # ex: /taric_books/search_page/search
+    # ex: /taric_books/search_page/search
     url(r'^search_page/(?P<search>[-\w]+)/(?P<search_type>[-\w]+)/$', views.search_page, name='search_page'),
     # ex: /taric_books/isbn/
     url(r'^(?P<value>[-\w]+)/$', views.isbn, name='isbn'),

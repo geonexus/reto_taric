@@ -3,6 +3,10 @@
     <head lang="en">
         {% load staticfiles %}
         <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
+        <script src="{% static 'taric_books/script.js' %}" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+
+        </script>
         <meta charset="UTF-8">
         <title>Search Books</title>
     </head>
@@ -10,11 +14,12 @@
     {%  include "taric_books/header.html" %}
     <div id="main_body">
         <h1>TARIC BOOKS</h1>
-        <form id="form-wrapper" class="form-wrapper" action="{% url 'search' %}" method="post">
-        {% csrf_token %}
-                {{ form_type.as_p }}
-                {{ form_value.as_p }}
-                <button type="submit" id="sub_button">Search</button>
+        <form id="form-wrapper" name="search_form"
+              class="form-wrapper" action="{% url 'search' %}" method="post">
+            {% csrf_token %}
+            {{ form_type.as_p }}
+            {{ form_value.as_p }}
+            <button type="submit" id="sub_button">Search</button>
         </form>
     </div>
         {%  include "taric_books/footer.html" %}

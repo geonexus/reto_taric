@@ -71,7 +71,24 @@ After finishing you should install all requirements using pip. Execute  the foll
 
     $ pip install -r requirements.txt
 
-Finally you must configure the application to add your isbndb API key to ``settings.py``.
+Top_.
+
+Configuration
+-------------
+Finally you must configure the application by adding some values in ``reto_taric/settings.py``:
+
+- Add your isbndb API key in `ISBNDB_API_KEY``.
+- add a unique random key for ``SECRET`` parameter.
+- You should also add your host addresses to ``ALLOWED_HOSTS`` parameter.
+
+If you disable Debug parameter, the static content (css, images and JS) will be managed by the application server
+so you will need execute the application using Apache, Gunicorn, uwsgi, etc.
+If you prefer still executing the application without DEBUG mode, you must run Django development server
+ with ``--insecure`` parameter to load static content.
+
+.. code::
+
+    $ python manage.py runserver --insecure
 
 
 Top_.

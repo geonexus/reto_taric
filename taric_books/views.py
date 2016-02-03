@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.utils.text import slugify
 from .forms import SearchFormType, SearchFormValue, PageForm
-import isbn_manager
+import isbn_utils
 import gbooks_covers
 
 
@@ -33,7 +33,7 @@ def search(request):
         form_value = SearchFormValue()
         return render(request, 'taric_books/index.html', {'form_type': form_type, 'form_value': form_value})
 
-    response = isbn_manager.search_by(search_type, search_value, page=None)
+    response = isbn_utils.search_by(search_type, search_value, page=None)
     if search_type == "subject":
         html_template = "search_subject_result.html"
     else:
@@ -62,7 +62,7 @@ def search_page(request, search, search_type):
     search_value = slugify(search)
     page = request.POST['page_value']
 
-    response = isbn_manager.search_by(search_type, search_value, page=page)
+    response = isbn_utils.search_by(search_type, search_value, page=page)
     if search_type == "subject":
         html_template = "search_subject_result.html"
     else:
@@ -88,7 +88,7 @@ def isbn(request, value):
     :return: a render of the given HTML page.
     """
     # filtering by "book" includes ISBN direct search and title direct search
-    response = isbn_manager.search_by("book", value)
+    response = isbn_utils.search_by("book", value)
     isbn13 = response.data[0]["isbn13"]
     cover_url = gbooks_covers.find_cover_url_by_isbn(isbn13)
     context = {

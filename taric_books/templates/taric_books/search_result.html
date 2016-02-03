@@ -3,6 +3,8 @@
     <head lang="en">
         {% load staticfiles %}
         <link rel="stylesheet" type="text/css" href="{% static 'taric_books/style.css' %}" />
+        <script src="{% static 'taric_books/script.js' %}" type="text/javascript" charset="utf-8"></script>
+
         <meta charset="UTF-8">
         <title>Search Books</title>
     </head>
@@ -35,9 +37,11 @@
             </table>
             <div class="page_form">
                 Page {{ current_page }} from {{ page_count }}
-                <form action="{% url 'search_page' search=search_value search_type=search_type %}" method="post">
-                {% csrf_token %}
+                <form action="{% url 'search_page' search=search_value search_type=search_type %}" method="post"
+                        name="page_form">
+                    {% csrf_token %}
                         {{ page_form }}
+                    <input type="hidden" id="max_page" value="{{ page_count }}">
                     <input type="submit" value="Go" />
                 </form>
             </div>

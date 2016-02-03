@@ -27,9 +27,11 @@
             {% endfor %}
             <div class="page_form">
                 Page {{ current_page }} from {{ page_count }}
-                <form action="{% url 'search_page' search=search_value search_type=search_type %}" method="post">
+                <form action="{% url 'search_page' search=search_value search_type=search_type %}" method="post"
+                      name="page_form" onsubmit="return verifyPage({{ page_count }})">
                 {% csrf_token %}
                         {{ page_form }}
+                    <input type="hidden" id="max_page" value="{{ page_count }}">
                     <input type="submit" value="Go" />
                 </form>
             </div>

@@ -13,7 +13,7 @@ from unittest import SkipTest
 from django.conf import settings
 from mock import patch
 import json
-import isbn_manager
+import isbn_utils
 import gbooks_covers
 from reto_taric.constants import UNIT_TEST_RESOURCES_FOLDER, FILE_NAME_AUTHOR_SEARCH_RESPONSE, \
      FILE_NAME_AUTHOR_SEARCH_PAGE_RESPONSE, \
@@ -132,7 +132,7 @@ class Taric_books_tests(TestCase):
     def test_search_client_by_author(self, mock_get):
         """Tests if method gets a list of books written by a provided author."""
 
-        response = isbn_manager.search_by(self.filter_author, self.author)
+        response = isbn_utils.search_by(self.filter_author, self.author)
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_RESPONSE).read())["data"])
 
@@ -140,7 +140,7 @@ class Taric_books_tests(TestCase):
     def test_search_client_by_author_page2(self, mock_get):
         """Tests if method gets the page 2 of books list written by a provided author."""
 
-        response = isbn_manager.search_by(self.filter_author, self.author, page="2")
+        response = isbn_utils.search_by(self.filter_author, self.author, page="2")
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_AUTHOR_SEARCH_PAGE_RESPONSE).read())["data"])
 
@@ -148,7 +148,7 @@ class Taric_books_tests(TestCase):
     def test_search_client_by_title(self, mock_get):
         """Tests if method gets a list of books that match with the title."""
 
-        response = isbn_manager.search_by(self.filter_title, self.title)
+        response = isbn_utils.search_by(self.filter_title, self.title)
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_TITLE_SEARCH_RESPONSE).read())["data"])
 
@@ -156,7 +156,7 @@ class Taric_books_tests(TestCase):
     def test_search_client_by_isbn(self, mock_get):
         """Tests if method gets a book searching by ISBN."""
 
-        response = isbn_manager.search_by(self.filter_isbn, self.ISBN)
+        response = isbn_utils.search_by(self.filter_isbn, self.ISBN)
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_ISBN_SEARCH_RESPONSE).read())["data"])
 
@@ -164,7 +164,7 @@ class Taric_books_tests(TestCase):
     def test_search_client_by_publisher(self, mock_get):
         """Tests if method gets a list of books that match with the publisher."""
 
-        response = isbn_manager.search_by(self.filter_publisher, self.publisher)
+        response = isbn_utils.search_by(self.filter_publisher, self.publisher)
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_PUBLISHER_SEARCH_RESPONSE).read())["data"])
 
@@ -172,7 +172,7 @@ class Taric_books_tests(TestCase):
     def test_search_client_by_subject(self, mock_get):
         """Tests if method gets a list of books that match with the subject."""
 
-        response = isbn_manager.search_by(self.filter_subject, self.subject)
+        response = isbn_utils.search_by(self.filter_subject, self.subject)
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_SUBJECT_SEARCH_RESPONSE).read())["data"])
 
@@ -180,7 +180,7 @@ class Taric_books_tests(TestCase):
     def test_search_client_by_subject_page2(self, mock_get):
         """Tests if method gets the page 2 of a list of books that match with the subject."""
 
-        response = isbn_manager.search_by(self.filter_subject, self.subject, page="2")
+        response = isbn_utils.search_by(self.filter_subject, self.subject, page="2")
         self.assertEqual(response.data, json.loads(open(UNIT_TEST_RESOURCES_FOLDER +
                                                    FILE_NAME_SUBJECT_SEARCH_PAGE_RESPONSE).read())["data"])
 
