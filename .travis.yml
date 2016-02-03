@@ -1,15 +1,13 @@
 language: python
 sudo: required
 python:
-  - "2.7"
-
+- '2.7'
 env:
   global:
-    - COVERALLS_SERVICE_NAME=travis-ci
-
+  - COVERALLS_SERVICE_NAME=travis-ci
+  - secure: lVDxjFfhylSHhekm18G2v3V6q5Pqymsx2NufMDTtAk0WLRJckB8bvAOCr6eEcVOjbXMMS8Q8H0mwriTLPJhIahlD9UU4fbZ64Kn6JXf6qyCVb+cD8pxNE7R4ixdfleL02wn+MDalDj6dJkU9gi9MWU1fsxWisK6dc9SxBhkODulLwRZzAZZBf7kDtJocvRLMEFJzFfLxRBrpzglbxTR9D+qWyxHMCRfONcQjzmn7F3trN2SDtjqCa4P8XgkMB4ab/vuem7FCRhmujmUO7pPowcBuEQDOMDON6WTvEFV1LBnI7K5Eb0lL0mCpkPbIP83ZorJo5oAXnJy3ssBZuxZaSzj41TJ1QS5fmc+NdICnBJ8b5RpKkEMgLMD0LDt81kQrTHeSYltwX6vzyKmU6j/ShKG+3yuKNBAM6hbBVESYF2ZkBtuhnUmVfZymTR2X/5w8EqaUONuJYl+6PfyfY6bxaYVqtq6hCxXEM+1NguIcLe5OZm6H7oDpYO9GkeCHYQLHejGAr+y+uHg1dkmNntgyoUFAYCRPi3r2ElMUdnYncynTv2shjyZVu6aU3OZpYeC12gR8PJhN2hC1G5EzVMZHSvzDsRUk1QnNIp8MdDKG/VjB+wCjwM0W7Gmz1ir9Bul0tflB5dKeWJNG8366TMGDLVgtOz6jVdmsToEDmkvdCtg=
 script:
-  - pip install -r requirements.txt
-  - coverage run --source='.' manage.py test taric_books
-
+- pip install -r requirements.txt
+- coverage run --source='.' manage.py test taric_books
 after_success:
-  - coveralls
+- coveralls
