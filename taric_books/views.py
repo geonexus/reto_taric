@@ -28,11 +28,6 @@ def search(request):
     search_value = slugify(request.POST['search_value'])
     search_type = request.POST['search_type']
 
-    if search_value == "":
-        form_type = SearchFormType()
-        form_value = SearchFormValue()
-        return render(request, 'taric_books/index.html', {'form_type': form_type, 'form_value': form_value})
-
     response = isbn_utils.search_by(search_type, search_value, page=None)
     if search_type == "subject":
         html_template = "search_subject_result.html"

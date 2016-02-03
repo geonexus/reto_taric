@@ -1,4 +1,3 @@
 [report]
 omit =
-    window.py
     taric_books/tests.py
