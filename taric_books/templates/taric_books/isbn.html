@@ -10,13 +10,11 @@
         {%  include "taric_books/header.html" %}
         <div id="main_body">
             {% for book in book_details %}
-            <div align="center">
                 {% if cover_url %}
-                    <img src="{{ cover_url }}" alt="No cover" border="1"/>
+                    <img class="floating" src="{{ cover_url }}" alt="Book cover" border="1"/>
                 {% else %}
-                    <img src="{% static "taric_books/no_cover.jpg" %}" alt="No cover" border="1"/>
+                    <img class="floating" src="{% static "taric_books/no_cover.jpg" %}" alt="No cover" border="1"/>
                 {% endif %}
-            </div>
             <table class="book_details">
                 <tbody>
                     {% for key, value in book.items %}
