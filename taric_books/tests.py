@@ -9,7 +9,7 @@ __author__ = 'Geon'
 
 from django.test import TestCase
 from django.test import Client
-from unittest import SkipTest
+from models import Struct
 from django.conf import settings
 from mock import patch
 import json
@@ -57,20 +57,20 @@ class Taric_books_tests(TestCase):
     the application.
     """
     def setUp(self):
-        self.author = "Eduardo Mendoza"
+        self.author = "eduardo-mendoza"
         self.filter_author = "author_name"
         self.filter_isbn = "book"  # filtering by book includes ISBN direct search and title direct search
         self.filter_title = "title"
         self.filter_publisher = "publisher_name"
         self.filter_subject = "subject"
 
-        self.title = "Rina de gatos"
+        self.title = "rina-de-gatos"
         self.ISBN = "9788408105626"
         self.ISBN_for_cover = "9788432291395"
         self.ISBN_no_cover = "9781582346816"
         self.ISBN_no_book_cover = "0000000000000"
-        self.subject = "computer_science"
-        self.publisher = "Salamandra"
+        self.subject = "computer-science"
+        self.publisher = "salamandra"
 
     def mocked_requests_get(*args, **kwargs):
         """ mocked_requests_get defines all mocked responses when a requests is performed.
@@ -83,13 +83,13 @@ class Taric_books_tests(TestCase):
             def json(self):
                 return self.json_data
 
-        query_author = "books?q=" + "Eduardo Mendoza" + "&i=" + "author_name"
-        query_title = "books?q=" + "Rina de gatos" + "&i=" + "title"
-        query_publisher = "books?q=" + "Salamandra" + "&i=" + "publisher_name"
+        query_author = "books?q=" + "eduardo-mendoza" + "&i=" + "author_name"
+        query_title = "books?q=" + "rina-de-gatos" + "&i=" + "title"
+        query_publisher = "books?q=" + "salamandra" + "&i=" + "publisher_name"
 
-        query_subject = "subjects?q=" + "computer_science"
-        query_subject_page = "subjects?q=" + "computer_science" + "&p=2"
-        query_author_page = "books?q=" + "Eduardo Mendoza" + "&i=" + "author_name" + "&p=2"
+        query_subject = "subjects?q=" + "computer-science"
+        query_subject_page = "subjects?q=" + "computer-science" + "&p=2"
+        query_author_page = "books?q=" + "eduardo-mendoza" + "&i=" + "author_name" + "&p=2"
         query_isbn = "book/" + "9788408105626"
         ISBN_with_cover = "9788432291395"
         ISBN_without_cover = "9781582346816"
@@ -216,6 +216,85 @@ class Taric_books_tests(TestCase):
 
         self.assertEqual(response.status_code, 200)
 
+    def test_load_unknow_page(self):
+        """Tests if returns an error page when tries to get an unknown endpoint."""
+
+        c = Client()
+        response = c.get('/unknown_page/')
+
+        self.assertEqual(response.status_code, 404)
+
+    @patch('requests.get', side_effect=mocked_requests_get)
+    def test_load_search(self, mock_get):
+        """Tests if method load the search web when I perform a search by title."""
+
+        c = Client()
+        data = {
+            'search_type': self.filter_title,
+            'search_value': self.title
+        }
+        response = c.post('/taric_books/search/', data=data)
+
+        self.assertEqual(response.status_code, 200)
+
+    @patch('requests.get', side_effect=mocked_requests_get)
+    def test_load_search_page(self, mock_get):
+        """Tests if method load the second page of search web when I perform a search by author."""
+
+        c = Client()
+        data = {
+            'search_type': self.filter_author,
+            'search_value': self.author,
+            'page_value': '2'
+        }
+        response = c.post('/taric_books/search_page/'
+                          + self.author + '/' + self.filter_author + '/', data=data)
+
+        self.assertEqual(response.status_code, 200)
+
+    @patch('requests.get', side_effect=mocked_requests_get)
+    def test_load_search_subject(self, mock_get):
+        """Tests if method load the search web when I perform a search by subject."""
+
+        c = Client()
+        data = {
+            'search_type': self.filter_subject,
+            'search_value': self.subject,
+        }
+        response = c.post('/taric_books/search/', data=data)
+
+        self.assertEqual(response.status_code, 200)
+
+    @patch('requests.get', side_effect=mocked_requests_get)
+    def test_load_search_subject_page2(self, mock_get):
+        """Tests if method load the second page of search web when I perform a search by subject."""
+
+        c = Client()
+        data = {
+            'search_type': self.filter_subject,
+            'search_value': self.subject,
+            'page_value': '2'
+
+        }
+        response = c.post('/taric_books/search_page/'
+                          + self.subject + '/' + self.filter_subject + '/', data=data)
+
+        self.assertEqual(response.status_code, 200)
+
+    @patch('requests.get', side_effect=mocked_requests_get)
+    def test_load_book_details(self, mock_get):
+        """Tests if method load the details web with book details about a single book
+        providing the ISBN of the book."""
+
+        c = Client()
+        data = {
+            'search_type': self.filter_subject,
+            'search_value': self.subject,
+        }
+        response = c.get('/taric_books/%s/' % self.ISBN)
+
+        self.assertEqual(response.status_code, 200)
+
     @patch('requests.get', side_effect=mocked_requests_get)
     def test_cover_url_from_googlebooks(self, mock_get):
         """Tests if method gets a Cover url for ISBN."""
@@ -242,3 +321,15 @@ class Taric_books_tests(TestCase):
         response = gbooks_covers.find_cover_url_by_isbn(self.ISBN_no_book_cover)
         self.assertIsNone(response)
         self.assertTrue(mock_get.called)
+
+
+class Taric_books_model_tests(TestCase):
+    """Class to test models from taric_books application.
+    """
+    def test_Struct(self):
+        """Tests if class Struct returns an Object from a dictionary"""
+
+        my_dict = {'param1': 'value1', 'param2': {'param21': 'value21'}}
+        object1 = Struct(my_dict)
+
+        self.assertEqual(my_dict["param1"], object1.param1)
